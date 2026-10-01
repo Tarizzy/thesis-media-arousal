@@ -1,0 +1,75 @@
+
+MBFC_BIAS (outlets)
+mbfc_bias
+Right            54
+Left-Center      43
+Extreme Right    43
+Left             35
+Right-Center     21
+Least Biased     11
+Extreme Left      4
+
+CREDIBILITY (outlets)
+credibility
+High         83
+Low          80
+Medium       34
+<missing>    14
+
+TYPE (outlets)
+type
+Website                    117
+Newspaper                   31
+TV Station                  20
+Organization/Foundation     15
+Magazine                    15
+<missing>                    6
+News Agency                  5
+TV Station, Radio            1
+Radio Station                1
+
+COUNTRY (outlets)
+country
+USA               167
+United Kingdom     15
+<missing>           6
+Canada              6
+Russia              6
+Australia           2
+Israel              2
+Qatar               1
+France              1
+Iran                1
+Venezuala           1
+Ireland             1
+Netherlands         1
+Bulgaria            1
+
+SIDE x COUNTRY (outlets)
+mbfc_bias       centre  left  right  total
+country                                   
+<missing>            0     2      4      6
+Australia            0     1      1      2
+Bulgaria             0     0      1      1
+Canada               0     3      3      6
+France               1     0      0      1
+Iran                 0     0      1      1
+Ireland              0     1      0      1
+Israel               0     1      1      2
+Netherlands          0     1      0      1
+Qatar                0     1      0      1
+Russia               0     0      6      6
+USA                  8    64     95    167
+United Kingdom       2     7      6     15
+Venezuala            0     1      0      1
+total               11    82    118    211
+
+OUTLETS WITH NO COUNTRY
+                        mbfc_bias mbfc_factuality  articles
+source                                                     
+activistpost                 Left             Low       297
+countercurrentnews           Left           Mixed       284
+libertywriters      Extreme Right        Very Low       199
+sgtreport           Extreme Right             Low       295
+usapoliticsnow      Extreme Right             Low       209
+worldnewspolitics   Extreme Right             Low       292

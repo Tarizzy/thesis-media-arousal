@@ -1,0 +1,39 @@
+08e_tfidf - 2026-09-24 09:05 - 57,210 articles, 211 outlets
+5-fold x 2 repeats, all splits grouped by outlet; TF-IDF fitted inside each fold, max 50,000 terms
+
+   rep 0 fold 0: 48,821 terms, 45,851 train / 11,359 held-out articles (69s)
+   rep 0 fold 1: 49,211 terms, 45,684 train / 11,526 held-out articles (121s)
+   rep 0 fold 2: 49,333 terms, 45,951 train / 11,259 held-out articles (163s)
+   rep 0 fold 3: 49,753 terms, 45,752 train / 11,458 held-out articles (206s)
+   rep 0 fold 4: 49,507 terms, 45,602 train / 11,608 held-out articles (250s)
+   rep 0  TF-IDF words              article QWK 0.474   outlet QWK 0.709   outlet acc 0.540
+   rep 0  11 features, logistic     article QWK 0.229   outlet QWK 0.515   outlet acc 0.403
+   rep 0  11 features, boosting     article QWK 0.241   outlet QWK 0.478   outlet acc 0.445
+   rep 0  TF-IDF + 11 features      article QWK 0.479   outlet QWK 0.710   outlet acc 0.536
+   rep 1 fold 0: 49,150 terms, 45,733 train / 11,477 held-out articles (293s)
+   rep 1 fold 1: 49,436 terms, 45,762 train / 11,448 held-out articles (342s)
+   rep 1 fold 2: 49,062 terms, 45,988 train / 11,222 held-out articles (391s)
+   rep 1 fold 3: 49,645 terms, 45,553 train / 11,657 held-out articles (443s)
+   rep 1 fold 4: 49,311 terms, 45,804 train / 11,406 held-out articles (488s)
+   rep 1  TF-IDF words              article QWK 0.477   outlet QWK 0.695   outlet acc 0.517
+   rep 1  11 features, logistic     article QWK 0.225   outlet QWK 0.572   outlet acc 0.408
+   rep 1  11 features, boosting     article QWK 0.240   outlet QWK 0.472   outlet acc 0.441
+   rep 1  TF-IDF + 11 features      article QWK 0.480   outlet QWK 0.681   outlet acc 0.512
+
+================================================================================================
+MEAN OVER REPEATS (held-out outlets)
+                       article_QWK  article_accuracy  article_macroF1  outlet_QWK  outlet_accuracy  outlet_macroF1  outlet_mean_abs_error
+model                                                                                                                                    
+11 features, boosting        0.241             0.361            0.235       0.475            0.443           0.280                  0.879
+11 features, logistic        0.227             0.281            0.238       0.543            0.405           0.341                  0.927
+TF-IDF + 11 features         0.479             0.381            0.320       0.695            0.524           0.356                  0.656
+TF-IDF words                 0.475             0.380            0.319       0.702            0.528           0.364                  0.649
+
+   TF-IDF minus the best engineered-feature model: +0.227 outlet QWK
+   TF-IDF + features minus TF-IDF alone:           -0.006 outlet QWK
+   (the 08b2 tuned text-only outlet QWK is 0.563 forest / 0.564 boosting, on 5 repeats)
+
+================================================================================================
+WHICH WORDS THE TF-IDF MODEL USES (fitted on all articles: in-sample, for illustration only)
+   towards Very Low : share, reports, trending, scroll, us, jews, breitbart, bannon, stated, ranger, democrat, jewish, newsfeed, jew, pravda, luciferian, friend, internet, the, however
+   towards High     : cn, goodman, but, trans, lgbt, amy, album, wing, cent, maddow, illinois, said, reflection, ap, pandemic, adds, canada, colorado, morrison, chicago

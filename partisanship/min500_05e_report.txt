@@ -1,0 +1,69 @@
+05e_framing - 2026-09-21 18:50 - 211 outlets, 10,000 words, 6,416 of them in the NRC-VAD lexicon
+clusters scored: 33 of 33 (an outlet needs 500 tokens in a cluster; a cluster needs 5 outlets a side)
+
+CLUSTERS BY FRAMING DIVERGENCE (permutation-adjusted; CI = 95% outlet bootstrap of the raw score)
+                                  label framing     raw          95% CI  outlets     L/R pol_share       np
+cluster                                                                                                    
+9                  Environment & energy  0.1455  0.3133  [0.321, 0.389]      202  80/111      0.37         
+21                    US investigations  0.1217  0.2780  [0.287, 0.349]      209  80/118      0.77         
+24                    Abortion & rights  0.1169  0.2954  [0.313, 0.373]      196  80/105      0.47         
+17                  UK domestic affairs  0.1152  0.3706  [0.402, 0.483]      178   72/96      0.23         
+23                       Space & nature  0.1130  0.3684  [0.400, 0.474]      184   76/98      0.11         
+28                       Health & COVID  0.1105  0.2893  [0.305, 0.369]      203  79/113      0.21         
+11                   Business & markets  0.1064  0.2915  [0.307, 0.369]      204  79/114      0.34         
+0             Latin America & US border  0.1018  0.2838  [0.303, 0.362]      207  80/116      0.59         
+25              Election administration  0.0984  0.2564  [0.273, 0.321]      208  80/117      0.86         
+7                             Transport  0.0957  0.3296  [0.361, 0.430]      185  71/104      0.18         
+19                   Military & defence  0.0935  0.2644  [0.282, 0.338]      205  79/115      0.50         
+2                         US pro sports  0.0922  0.3354  [0.365, 0.434]      174   69/94      0.11  non-pol
+18                    Economy & welfare  0.0904  0.2599  [0.275, 0.331]      208  82/115      0.50         
+32               European club football  0.0893  0.3529  [0.390, 0.476]      151   65/76      0.10  non-pol
+22                       Partisan media  0.0874  0.2358  [0.253, 0.305]      208  80/117      0.75         
+30                            Education  0.0870  0.2934  [0.316, 0.378]      198  75/112      0.29         
+3                                 Music  0.0848  0.3244  [0.359, 0.429]      185  74/101      0.17  non-pol
+4                     Celebrity & soaps  0.0843  0.3452  [0.380, 0.466]      181   73/98      0.15  non-pol
+20            Foreign national politics  0.0841  0.2735  [0.293, 0.359]      201  80/110      0.66         
+16       Mixed: US political figures &   0.0841  0.2698  [0.292, 0.351]      209  80/118      0.44         
+13                            Lifestyle  0.0835  0.2855  [0.312, 0.368]      209  80/118      0.16  non-pol
+6                          Asia-Pacific  0.0827  0.2697  [0.292, 0.360]      199  78/110      0.41         
+8                           US Congress  0.0813  0.2275  [0.245, 0.294]      209  80/118      0.79         
+29                     Race & extremism  0.0786  0.2331  [0.253, 0.299]      210  81/118      0.47         
+15                      Crime & justice  0.0770  0.2506  [0.275, 0.323]      205  79/115      0.38         
+26          Olympic & individual sports  0.0746  0.3580  [0.402, 0.497]      159   66/83      0.08  non-pol
+31                   Technology & cyber  0.0744  0.2702  [0.299, 0.360]      203  81/111      0.23         
+5               Russia & Eastern Europe  0.0716  0.2449  [0.262, 0.324]      202  79/112      0.56         
+10                       Film & theatre  0.0706  0.3180  [0.355, 0.432]      178   73/96      0.14  non-pol
+1                  Health: diet & drugs  0.0690  0.2962  [0.334, 0.396]      194  79/105      0.14         
+12                  US regional & local  0.0690  0.2475  [0.277, 0.322]      202  78/113      0.38         
+27            Middle East & Afghanistan  0.0663  0.2383  [0.261, 0.310]      204  80/113      0.51         
+14                  UK football & rugby  0.0357  0.4745  [0.542, 0.736]       69   32/32      0.08  non-pol
+
+MOST DISTINCTIVE WORDS (top 5 clusters by divergence: right-leaning words, then left-leaning)
+   9 Environment & energy
+      right: biden, sanctions, russia, russian, prices, oil, putin, nord
+      left:  climate, trump, water, communities, change, environmental, said, action
+   21 US investigations
+      right: fbi, biden, clinton, steele, media, dossier, hunter, hillary
+      left:  trump, said, manafort, court, house, committee, republican, republicans
+   24 Abortion & rights
+      right: pro, life, biden, biological, children, unborn, babies, baby
+      left:  anti, rights, abortion, said, access, ban, court, reproductive
+   17 UK domestic affairs
+      right: michigan, county, votes, police, ballots, dominion, voting, machines
+      left:  trump, climate, workers, white, labour, military, ireland, said
+   23 Space & nature
+      right: ufos, ufo, intelligence, biden, china, hunter, ukraine, unidentified
+      left:  trump, climate, species, said, change, navajo, heat, lands
+
+PRE-REGISTERED CHECKS
+Rule 3 split-half, values (the model uses the value): r median 0.36 [0.15, 0.60], Spearman-Brown 0.53 -> FAIL
+           ranks: rho median 0.29, Spearman-Brown 0.44 (harsh when most clusters sit near zero)
+Rule 2 sanity: 4 of 5 contested clusters in the top half (need 3); mean contested 0.1012 vs non-political 0.0769 -> PASS
+
+VARIANTS vs PRIMARY (Spearman rho over the clusters both score)
+   us_only           0.937  (33 clusters)
+   mixed_plus        0.781  (33 clusters)
+   no_emotion_words  0.916  (33 clusters)
+Other (14 + 26 merged): 0.0663
+
+RESULT: FAILS rule 3 - fall back to hand-coded divisiveness - total 28s

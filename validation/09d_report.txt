@@ -1,0 +1,66 @@
+09d_three_coders - coders: coder2, taner, tarik | 120 main items
+
+1  EACH CODER
+   coder2      rated 120 | 0: 24, 1: 53, 2: 43 | mean 1.16 | drift by block of 20: 1.40, 1.05, 1.00, 1.35, 1.00, 1.15
+   taner    rated 120 | 0: 31, 1: 52, 2: 37 | mean 1.05 | drift by block of 20: 0.95, 1.20, 0.95, 1.05, 1.05, 1.10
+   tarik    rated 120 | 0: 27, 1: 50, 2: 43 | mean 1.13 | drift by block of 20: 0.95, 0.85, 1.10, 1.40, 1.25, 1.25
+
+2  AGREEMENT BETWEEN CODERS (120 articles)
+   coder2    vs taner  exact 55% | within one 98% | quadratic-weighted kappa 0.527 | Spearman 0.539
+   coder2    vs tarik  exact 51% | within one 95% | quadratic-weighted kappa 0.416 | Spearman 0.424
+   taner  vs tarik  exact 52% | within one 95% | quadratic-weighted kappa 0.443 | Spearman 0.448
+   mean pairwise kappa 0.462 | mean pairwise Spearman 0.470
+
+3  THE HUMAN CRITERION AGAINST LEXICON AROUSAL (Spearman, 120 articles)
+         coders  n_coders  kappa  rho_lexicon     p  reliability_of_mean  ceiling  primary
+            coder2         1    NaN       -0.032 0.731                  NaN      NaN    False
+          taner         1    NaN       -0.104 0.256                  NaN      NaN    False
+          tarik         1    NaN        0.109 0.235                  NaN      NaN    False
+      coder2+taner         2  0.527       -0.072 0.434                0.700    0.837    False
+      coder2+tarik         2  0.416        0.057 0.537                0.595    0.771    False
+    taner+tarik         2  0.443       -0.003 0.971                0.618    0.786    False
+coder2+taner+tarik         3  0.462       -0.005 0.958                0.727    0.853     True
+
+   PRIMARY (all 3 coders): mean pairwise kappa 0.462, rho -0.005 (p 0.9583); reliability of the 3-coder mean 0.727, so no measure can correlate above about 0.85 with it
+
+4  WHAT THE PRIMARY CRITERION TRACKS (Spearman with the all-coder mean)
+            feature    rho      p
+     flesch_kincaid -0.314 +0.000
+attribution_density -0.289 +0.001
+         caps_ratio +0.278 +0.002
+          dominance -0.202 +0.027
+         log_length +0.172 +0.061
+            valence -0.162 +0.076
+   exclamation_rate +0.153 +0.094
+          certainty +0.140 +0.127
+   arousal_allwords +0.063 +0.494
+            hedging -0.041 +0.657
+               mtld +0.023 +0.799
+            arousal -0.005 +0.958
+   strongest two: flesch_kincaid, attribution_density
+
+5  TOPIC CONTESTEDNESS AGAINST FRAMING DIVERGENCE (blind coders only)
+   blind topic coders: coder2, taner | excluded as not blind: none
+   coder2    33 topics  Spearman +0.122  p 0.5000
+   taner  27 topics  Spearman +0.217  p 0.2775
+   agreement coder2 vs taner on 27 topics: kappa 0.385
+   PRIMARY (mean of blind coders): 33 topics  Spearman +0.092  p 0.6096
+
+6  READING UNDER validation/09_interpretation_rule.md (primary only)
+   agreement 0.462 -> moderately reliable | rho -0.005 -> BRANCH B
+   topics: rho +0.092, p 0.6096 -> does NOT support reading framing divergence as contestation
+   strongest two correlates are not both style features -> Branch B's bracketed style sentence DROPPED (if Branch B)
+
+7  EXPLORATORY (not pre-specified): does the human criterion track outlet factuality?
+   all-coder mean vs factuality (0-4): Spearman -0.241  p 0.0081
+   coder2    Spearman -0.157  p 0.0876
+   taner  Spearman -0.286  p 0.0015
+   tarik  Spearman -0.143  p 0.1188
+   lexicon arousal vs factuality on the same items: Spearman +0.043  p 0.6448  (the sample was stratified by arousal quintile x factuality, which flattens this by design)
+         items  human_mean  lexicon_mean
+   fact                                 
+   0        22      +1.258        -0.018
+   1        27      +1.235        -0.021
+   2        25      +1.213        -0.023
+   3        23      +0.986        -0.009
+   4        23      +0.855        -0.017

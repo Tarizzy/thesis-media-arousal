@@ -1,0 +1,45 @@
+08b_nested - 2026-09-21 11:39 - 57,210 articles, 211 outlets
+outer 5-fold x 2 repeats, inner 3-fold, all splits grouped by outlet
+grids: random forest: [{'min_samples_leaf': 20}, {'min_samples_leaf': 50}, {'min_samples_leaf': 100}]; boosting: [{'learning_rate': 0.05, 'max_leaf_nodes': 15}, {'learning_rate': 0.05, 'max_leaf_nodes': 31}, {'learning_rate': 0.1, 'max_leaf_nodes': 15}, {'learning_rate': 0.1, 'max_leaf_nodes': 31}]
+   rep 0  text only   ordinal logit  article QWK 0.230  outlet QWK 0.450  (10s)
+   rep 0  text only   random forest  article QWK 0.233  outlet QWK 0.523  (74s)
+   rep 0  text only   boosting       article QWK 0.229  outlet QWK 0.534  (166s)
+   rep 0  bias only   ordinal logit  article QWK 0.666  outlet QWK 0.679  (4s)
+   rep 0  bias only   random forest  article QWK 0.750  outlet QWK 0.758  (13s)
+   rep 0  bias only   boosting       article QWK 0.750  outlet QWK 0.758  (61s)
+   rep 0  text + bias ordinal logit  article QWK 0.696  outlet QWK 0.686  (17s)
+   rep 0  text + bias random forest  article QWK 0.719  outlet QWK 0.747  (60s)
+   rep 0  text + bias boosting       article QWK 0.715  outlet QWK 0.748  (198s)
+   rep 1  text only   ordinal logit  article QWK 0.231  outlet QWK 0.500  (11s)
+   rep 1  text only   random forest  article QWK 0.231  outlet QWK 0.538  (115s)
+   rep 1  text only   boosting       article QWK 0.224  outlet QWK 0.562  (225s)
+   rep 1  bias only   ordinal logit  article QWK 0.657  outlet QWK 0.675  (5s)
+   rep 1  bias only   random forest  article QWK 0.717  outlet QWK 0.728  (16s)
+   rep 1  bias only   boosting       article QWK 0.709  outlet QWK 0.720  (86s)
+   rep 1  text + bias ordinal logit  article QWK 0.682  outlet QWK 0.684  (20s)
+   rep 1  text + bias random forest  article QWK 0.710  outlet QWK 0.727  (85s)
+   rep 1  text + bias boosting       article QWK 0.711  outlet QWK 0.735  (236s)
+
+NESTED, OUTLET-GROUPED PERFORMANCE (mean over repeats)
+                           article QWK  article macro F1  outlet QWK  outlet macro F1  outlet accuracy
+features    model                                                                                     
+bias only   boosting             0.729             0.370       0.739            0.381            0.429
+            ordinal logit        0.661             0.366       0.677            0.371            0.555
+            random forest        0.733             0.364       0.743            0.375            0.427
+text + bias boosting             0.713             0.400       0.741            0.417            0.488
+            ordinal logit        0.689             0.379       0.685            0.374            0.559
+            random forest        0.715             0.399       0.737            0.399            0.486
+text only   boosting             0.227             0.237       0.548            0.359            0.422
+            ordinal logit        0.230             0.220       0.475            0.229            0.408
+            random forest        0.232             0.247       0.530            0.300            0.445
+
+DOES TEXT ADD ANYTHING ONCE BIAS IS KNOWN? (outlet-level QWK, text + bias minus bias only)
+   ordinal logit  0.685 - 0.677 = +0.008
+   random forest  0.737 - 0.743 = -0.006
+   boosting       0.741 - 0.739 = +0.002
+
+CHOSEN PARAMETERS (how often each value won an outer fold)
+   random forest: min_samples_leaf 20: 25 / 100: 4 / 50: 1
+   boosting: learning_rate 0.05: 29 / 0.1: 1, max_leaf_nodes 15: 30
+
+RESULT: wrote 08b_results.csv, 08b_params.csv, 08b_oof.parquet in 1401s

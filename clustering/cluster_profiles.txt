@@ -1,0 +1,495 @@
+
+=== Cluster 0 | topics 1,013 | articles 86,035 (2.0%) | years 6
+keywords: puerto_rico, cuba, puerto, border_patrol, cartel, rico, cuban, havana, venezuela, colombia, guatemala, venezuelan, cbp, maduro, obrador
+medoids:
+  juarez, detainees, federal_prisons, immigration_customs, la_rosa
+  cienfuegos, cartel, salvador_cienfuegos, mexican, nieto
+  coahuila, cartel, laredo, gunmen, miguel_angel
+  cienfuegos, salvador_cienfuegos, drug_trafficking, cartel, mexican
+  hernández, cartel, hernandez, honduran, obrador
+largest topics:
+  [2,293] southern_border, border_patrol, end_title, mayorkas, health_order
+  [1,498] guaido, nicolas_maduro, juan_guaido, venezuelan, guaidó
+  [1,298] border_patrol, cbp, apprehended, patrol_agents, customs_border
+  [1,064] migrant_workers, fifa, infantino, doha, qatari
+  [1,029] bolsonaro, lula, jair, jair_bolsonaro, da_silva
+
+=== Cluster 1 | topics 1,043 | articles 131,313 (3.1%) | years 6
+keywords: cannabis, marijuana, vegan, meat, plastic, opioid, tobacco, sleep, recreational, plant-based, coffee, diet, wine, glyphosate, obesity
+medoids:
+  meat, plant-based, burger, cow_milk, microorganisms
+  cannabis, hemp, weed, chimeras, edibles
+  cannabis, marijuana, cannabis_use, medical_marijuana, marijuana_use
+  processed_meat, processed, red_meat, meat, meats
+  tobacco, flavored, tobacco_products, menthol_cigarettes, menthol
+largest topics:
+  [7,108] mariupol, azovstal, bucha, kherson, kharkiv
+  [4,915] mg, mg_kg, kg, mice, rats
+  [4,168] mg, mg_kg, rats, kg, mice
+  [2,713] pan, butter, garlic, recipe, oven
+  [2,584] cloth, face_masks, surgical, cloth_masks, surgical_masks
+
+=== Cluster 2 | topics 1,038 | articles 105,267 (2.5%) | years 6
+keywords: brady, lakers, browns, nhl, mets, super_bowl, raiders, rams, world_series, seahawks, tom_brady, steelers, cowboys, lebron, patriots
+medoids:
+  broncos, elway, john_elway, drew_lock, jeudy
+  rivers, bowls, football, hall_fame, cortez
+  ravens, baltimore_ravens, colts, defensive_tackle, indianapolis_colts
+  browns, cleveland, cleveland_browns, cleveland_police, browns_players
+  ravens, lamar_jackson, browns, huntley, harbaugh
+largest topics:
+  [1,739] college_football, king_north, true_king, related_david, hookstead_true
+  [1,599] rebounds, scored_points, points_rebounds, lakers, nets
+  [1,315] rebounds, lakers, knicks, nba, clippers
+  [1,042] college_football, ohio_state, lsu, touchdowns, yards
+  [944] yankees, boone, aaron_boone, boone_said, aaron_judge
+
+=== Cluster 3 | topics 963 | articles 68,763 (1.6%) | years 6
+keywords: album, rapper, taylor_swift, swift, kanye, k-pop, kanye_west, bts, rihanna, snoop_dogg, concert, songs, glastonbury, albums, grammys
+medoids:
+  cher, bubba, pop_icon, clarion_ledger, thought_day
+  rapper, legacy_live, woo, jeanette, shot_neck
+  adele, eilish, mckinnon, night_live, billie
+  album, guitar, albums, vocals, band
+  punk, punk_rock, paul_williams, concert, shot_johnson
+largest topics:
+  [1,385] album, guitar, band, songs, albums
+  [1,214] share_pinterest, facebook_share, share_share, pinterest, share_facebook
+  [1,122] hancock, matt_hancock, jungle, boy_george, ant
+  [892] spotify, joe_rogan, rogan, neil_young, rogan_experience
+  [843] album, guitar, albums, country_music, songs
+
+=== Cluster 4 | topics 1,281 | articles 123,238 (2.9%) | years 6
+keywords: kardashian, jenner, coronation_street, kim_kardashian, love_island, housewives, britney, bachelor, towie, emmerdale, kylie, eastenders, real_housewives, chloe, aniston
+medoids:
+  faye, emma, emma_brooker, chesney, brooker
+  carol, bikini, gemma, amanda, ❤_️
+  gemma, gemma_collins, towie, towie_star, gc
+  perrie, louise, redknapp, little_mix, jesy
+  kush, whitney, eastenders, mila, mick
+largest topics:
+  [1,641] davide, luca, ekin-su, love_island, gemma
+  [1,622] ghislaine, ghislaine_maxwell, jeffrey_epstein, maxwell, socialite
+  [1,421] coronation_street, soap, coronation, eastenders, emmerdale
+  [1,421] oprah, winfrey, oprah_winfrey, harry_meghan, royal_family
+  [1,267] deidre, dear_deidre, deidre_says, dear, sex_life
+
+=== Cluster 5 | topics 1,229 | articles 119,790 (2.8%) | years 6
+keywords: hungary, polish, greece, serbia, poland, hungarian, navalny, lavrov, crimea, macedonia, orban, rubles, warsaw, soviet, north_macedonia
+medoids:
+  stremousov, saldo, russian-appointed, pasechnik, kherson
+  severodvinsk, diplomats, arkhangelsk, northern_russia, russian_authorities
+  lavrov, tass, photographer, russian_foreign, kislyak
+  russians_ukrainians, ukrainians, kremlin_website, website_monday, zelensky
+  chechen, vadim, berlin, georgian, russian_diplomats
+largest topics:
+  [4,708] soviet_union, soviet, donbas, donbass, cold_war
+  [3,462] geneva, russian_president, biden_russian, russian_leader, president_vladimir
+  [2,283] donbass, kiev, ukrainian, crimea, eastern_ukraine
+  [1,871] lukashenko, belarusian, belarus, alexander_lukashenko, minsk
+  [1,833] duda, zelenskyy, invade, invade_ukraine, president_andrzej
+
+=== Cluster 6 | topics 1,203 | articles 115,041 (2.7%) | years 6
+keywords: myanmar, xinjiang, bangladesh, pyongyang, seoul, taiwan, rohingya, sri, north_korean, thailand, typhoon, bangkok, philippines, sri_lanka, nepal
+medoids:
+  suu, myanmar, rohingya, kyi, aung
+  ladakh, informal, india_china, chinese_president, indian_prime
+  asean, hun_sen, hun, myanmar, sen
+  myanmar, kyi, suu, suu_kyi, aung
+  cambodia, seoul, samsung, hun, gyeonggi
+largest topics:
+  [2,295] denuclearization, korean_leader, pyongyang, kim_jong-un, jong-un
+  [2,105] taipei, visit_taiwan, taiwan_strait, pelosi_visit, strait
+  [2,081] indian_variant, roadmap, national_lockdown, sage, easing
+  [2,078] seoul, daegu, hubei, south_korea, shincheonji
+  [1,524] jcpoa, nuclear_deal, vienna, joint_comprehensive, comprehensive_plan
+
+=== Cluster 7 | topics 918 | articles 74,133 (1.8%) | years 6
+keywords: uber, spacex, ryanair, lyft, airline, self-driving, boeing, british_airways, tsa, faa, attendant, flight_attendant, airways, cruise, tesla
+medoids:
+  air_mobility, taxis, evtol, electric_vertical, vertical
+  airlines, united_airlines, flight, passenger, dao
+  uber_lyft, lyft, taxi, ride-sharing, uber
+  uber, taxi, taxi_drivers, medallion, lyft
+  uber, lyft, rides, waymo, ride-hailing
+largest topics:
+  [1,328] easyjet, heathrow, airline, cancellations, airports
+  [1,262] rmt, network_rail, rail_maritime, maritime_transport, industrial_action
+  [926] truckers, freedom_convoy, ottawa, convoy, trucker
+  [847] boeing_max, faa, boeing, ethiopian_airlines, crashes
+  [783] cruises, cruise, carnival, cruise_ships, cruise_line
+
+=== Cluster 8 | topics 1,905 | articles 281,119 (6.7%) | years 6
+keywords: abrams, rand_paul, rand, nunes, ocasio-cortez, kemp, stacey_abrams, devin_nunes, gabbard, ginsburg, scalise, tulsi, klobuchar, rubio, ducey
+medoids:
+  tillis, erica, cunningham, lieutenant_governor, pac
+  rand_paul, rand, senator_rand, anthony_fauci, paul_r-ky
+  flake, ducey, cindy_mccain, jeff_flake, mccain
+  shalala, donna_shalala, mucarsel-powell, ros-lehtinen, ileana_ros-lehtinen
+  ron_johnson, ron, firsthand, vindman, wisconsin_republican
+largest topics:
+  [48,967] amash, sondland, michael_cohen, yovanovitch, romney
+  [23,032] hunter_biden, approval_rating, biden_approval, rating, disapprove
+  [14,996] liz_cheney, raffensperger, mike_pence, impeach, president_mike
+  [14,517] roy_moore, luther_strange, flake, roy, luther
+  [6,789] blasio, cuomo_said, mayor_blasio, andrew_cuomo, blasio_said
+
+=== Cluster 9 | topics 951 | articles 111,839 (2.7%) | years 6
+keywords: coal, wildfires, pollution, epa, warming, carbon, air_pollution, pipeline, solar, air_quality, global_warming, emissions, methane, carbon_dioxide, nuclear_power
+medoids:
+  carbon, emissions, coal, renewable, renewable_energy
+  clean_energy, utilities, renewable, fossil_fuels, fuels
+  heavy-duty, waiver, pollution, greenhouse_gas, inslee
+  coal, burning_coal, government-appointed, electricity, utility_companies
+  methane, oil_gas, pipelines, gas_industry, methane_emissions
+largest topics:
+  [7,198] blaze, chemical_plant, firefighters, bus, firefighter
+  [2,979] gazprom, russian_gas, gas_supplies, natural_gas, lng
+  [2,138] ev, evs, electric_vehicles, electric_vehicle, electric_cars
+  [1,795] russian_oil, keystone, oil_imports, keystone_xl, imports
+  [1,580] ofgem, price_cap, energy_price, energy_bills, gas_electricity
+
+=== Cluster 10 | topics 1,098 | articles 87,320 (2.1%) | years 6
+keywords: marvel, star_wars, james_bond, batman, theaters, broadway, oscars, amc, harry_potter, emmy, musical, night_live, rowling, daniel_craig, globes
+medoids:
+  schwartzel, reeves, cena, keanu_reeves, blockbusters
+  pitt, brad_pitt, supporting_actor, time_hollywood, tarantino
+  clooney, george_clooney, julia_roberts, ticket_paradise, amal
+  batman, pattinson, robert_pattinson, justice_league, matt_reeves
+  mcconaughey, matthew_mcconaughey, actor_matthew, patronize, russell_brand
+largest topics:
+  [1,733] theatre, broadway, opera, musical, west_end
+  [1,474] amber_heard, johnny_depp, johnny, depp, amber
+  [1,132] theatre, broadway, musical, cyrano, shakespeare
+  [1,028] fiction, novel, novels, literary, novelist
+  [1,008] chris_rock, oscars, jada, pinkett, pinkett_smith
+
+=== Cluster 11 | topics 1,125 | articles 94,425 (2.2%) | years 6
+keywords: bezos, s_p, jeff_bezos, zuckerberg, musk, antitrust, tesla, soros, dow, ceos, billionaires, gates, nasdaq, george_soros, stocks
+medoids:
+  rsa, countrywide, g4s, takeover, private_equity
+  ozy, rao, goldman_sachs, digital_media, sachs
+  blackrock, financial_institutions, fink, fossil_fuel, asset_manager
+  redstone, viacom, amusements, shari, sumner
+  chatham, asset_management, hedge_fund, news_company, bankruptcy
+largest topics:
+  [1,622] poison_pill, free_speech, musk_offer, shareholder, town_square
+  [1,441] s_p, dow, p, dow_jones, jones_industrial
+  [1,292] powell, jerome_powell, jerome, powell_said, federal_reserve
+  [1,002] s_p, nasdaq, dow, jones_industrial, industrial_average
+  [908] gamestop, robinhood, hedge_funds, hedge, wallstreetbets
+
+=== Cluster 12 | topics 1,626 | articles 154,996 (3.7%) | years 6
+keywords: south_dakota, tornado, colorado_springs, springs, weather_service, staten, staten_island, moines, national_park, idaho, mall, boulder, wildfire, monument, des_moines
+medoids:
+  arvada, beesley, arvada_police, hurley, olde_town
+  mcnally, pines, teacher, stop_stop, elkhart
+  garden_city, stein, wichita, apartment_complex, somali
+  irion, fernley, naomi_irion, lyon_county, walmart_parking
+  kankakee, bradley, canton, officer_tyler, marlene
+largest topics:
+  [23,998] parnas, rushmore, bounties, mount_rushmore, tuberville
+  [2,139] kyle_rittenhouse, kenosha, rosenbaum, kenosha_wisconsin, grosskreutz
+  [1,683] beaches, hotels, cruise, cruises, spa
+  [1,352] village_board, schaumburg, village_officials, redevelopment, village
+  [1,252] robb_elementary, robb, arredondo, mccraw, texas_department
+
+=== Cluster 13 | topics 1,991 | articles 221,112 (5.3%) | years 6
+keywords: halloween, painting, thanksgiving, cat, gifts, lottery, chef, toys, easter, gift, toy, cats, fireworks, christmas_tree, black_friday
+medoids:
+  nappies, bargains, discounts, shoppers, boots
+  sleeves, laughing, happy_birthday, ranting, unhinged
+  cent_people, snowman, festive, christmas_time, townhouse
+  birthdays, birthday, special_day, birthday_party, birthday_parties
+  lawless, animal_shelter, orr, help_black, christmas_dinner
+largest topics:
+  [8,132] pronounced_dead, collision, dead_scene, pronounced, enquiries
+  [3,686] novels, fiction, literary, poetry, books
+  [2,633] pet, pets, cat, cats, puppy
+  [2,407] dear_abby, abby, dear, •_dear, •_ask
+  [2,358] pet, cats, cat, dogs, pets
+
+=== Cluster 14 | topics 804 | articles 75,783 (1.8%) | years 6
+keywords: southgate, celtic, aston_villa, premiership, rangers, gareth_southgate, aston, fa, leicester, west_ham, leeds, fa_cup, rooney, dean_smith, ham
+medoids:
+  dean_smith, aston_villa, aston, claret, mings
+  london_derby, alderweireld, north_london, spurs, mourinho
+  dean_smith, aston_villa, aston, mings, leicester
+  steve_clarke, hampden, nations_league, slovakia, dykes
+  grealish, dean_smith, aston_villa, aston, mcginn
+largest topics:
+  [2,180] efl, league_clubs, fixtures, project_restart, restart
+  [2,009] eddie_jones, rugby_world, rugby, gatland, saracens
+  [1,138] starmer, keir, sir_keir, keir_starmer, hartlepool
+  [1,131] eddie_jones, twickenham, farrell, rugby, eddie
+  [1,041] moyes, west_ham, ham, hammers, david_moyes
+
+=== Cluster 15 | topics 1,811 | articles 170,781 (4.1%) | years 6
+keywords: execution, nypd, chicago_police, inmates, homicides, death_penalty, lethal_injection, crown_court, prisons, executions, inmate, child_pornography, violent_crime, parole, second_amendment
+medoids:
+  suspicion_murder, murder_man, arrested_suspicion, connection_incident, watkins
+  worrell, lamberth, phelps, patten, department_corrections
+  walter, threatening_kill, charged_threatening, michigan_man, anthrax
+  mead, hicks, criminal_defense, beast_reported, collar_criminal
+  lead_criminal, obama_vice, durham_work, work_lead, criminal_investigation
+largest topics:
+  [4,680] block_south, chicago_police, pronounced_dead, block_west, man_shot
+  [3,299] ketanji_brown, ketanji, brown_jackson, breyer, judge_ketanji
+  [3,218] collision, stabbed, arrested_suspicion, enquiries, suspicion_murder
+  [3,099] first-degree_murder, trooper, first-degree, fatally, coastguard
+  [2,699] collision, robbery, pronounced_dead, taken_hospital, junction
+
+=== Cluster 16 | topics 2,038 | articles 175,183 (4.2%) | years 6
+keywords: taylor_greene, greene, marjorie_taylor, maxwell, roger_stone, parnell, watkins, omar, tommy, ghislaine_maxwell, marjorie, boebert, bradley, ilhan_omar, blake
+medoids:
+  neelan, gary, gary_windass, windass, mikey
+  daybell, vallow, chad_daybell, jj, lori
+  leanne, harvey, harvey_gaskell, natasha, ben_price
+  rushton, ann_marie, crowbar, stables, parsons
+  stape, fiz, tyrone, isabella_flanagan, alan_halsall
+largest topics:
+  [5,104] walter_wallace, rave, wallace_jr, raves, looting
+  [2,703] barnier, michel_barnier, negotiator, frost, michel
+  [1,849] coney_barrett, amy_coney, coney, confirmation, judge_amy
+  [1,177] couzens, everard, sarah_everard, wayne_couzens, ms_everard
+  [880] greenberg, matt_gaetz, gaetz, joel_greenberg, sex_trafficking
+
+=== Cluster 17 | topics 1,435 | articles 145,201 (3.5%) | years 6
+keywords: tesco, grenfell, pubs, grenfell_tower, met_office, pub, rubbish, rail, cladding, aldi, windsor, licence, belfast, asda, bank_holiday
+medoids:
+  lancashire, crook, chorley, died_house, service_area
+  paddington, wires, slough, overhead, stevenage
+  tomlin, battersea, drug_dealers, wandsworth, beech
+  stratford, mile_end, transport_police, btp, central_line
+  basildon, dead_home, suffolk, suffolk_police, country_park
+largest topics:
+  [4,750] pubs, pub, pubs_restaurants, pubs_bars, hospitality
+  [4,020] collision, midlands_police, west_midlands, arrested_suspicion, enquiries
+  [2,219] pupils, primary_schools, schools_england, gavin_williamson, primary_school
+  [1,478] flats, southampton_city, new_forest, eastleigh, application
+  [1,438] travellers, holidaymakers, quarantine_list, shapps, arriving_uk
+
+=== Cluster 18 | topics 1,388 | articles 148,363 (3.5%) | years 6
+keywords: medicare, medicaid, irs, tenants, wage, health_insurance, minimum_wage, rent, pension, gdp, deficit, affordable_care, mortgage, social_security, food_stamps
+medoids:
+  furlough, jobs_market, furloughed, national_statistics, office_national
+  work_pay, government_employees, federal_employees, employees_union, controllers_association
+  waste_fraud, unemployment, pandemic_unemployment, unemployment_insurance, unemployment_benefits
+  unemployment_benefits, federal_unemployment, pandemic_unemployment, unemployment, unemployed
+  medicaid, cuts_medicaid, expansion, able-bodied, medicaid_expansion
+largest topics:
+  [1,716] transitory, price_index, cpi, federal_reserve, consumer_price
+  [1,481] military_construction, reopen, construction_projects, reopen_government, budget_proposal
+  [1,409] working_home, work_home, return_office, remote_work, flexible_working
+  [1,364] furlough, furlough_scheme, sunak, job_retention, rishi_sunak
+  [1,130] price_index, cpi, consumer_price, producer_price, final_demand
+
+=== Cluster 19 | topics 1,108 | articles 111,675 (2.7%) | years 6
+keywords: submarine, drills, uss, national_guard, veterans, hypersonic, coast_guard, sailors, submarines, stealth, space_force, marines, key_point, bombers, aircraft_carrier
+medoids:
+  test_launch, deputy_defense, need_remember, anti-submarine, tanks_infantry
+  mediterranean, uss, warships, strike_group, cruise_missiles
+  missile_systems, military_district, union_state, central_military, air_defense
+  hyten, national_guard, curtis, security_brief, rood
+  drills, press_office, military_district, notional, fleet
+largest topics:
+  [16,383] special_master, classified_documents, cannon, dearie, aileen
+  [1,739] stealth, lockheed, fighter, need_remember, air_force
+  [1,386] nuclear_weapons, use_nuclear, nuclear_war, tactical_nuclear, nuclear_forces
+  [1,206] greater_idlib, hts, saa, idlib, sdf
+  [1,042] ballistic, ballistic_missile, north_korea, korea_fired, pyongyang
+
+=== Cluster 20 | topics 1,228 | articles 134,024 (3.2%) | years 6
+keywords: trudeau, morrison, scott_morrison, merkel, pope, pope_francis, justin_trudeau, ontario, snp, sturgeon, minister_scott, francis, vatican, macron, corbyn
+medoids:
+  mr_sunak, ms_truss, hustings, tory_leadership, foreign_secretary
+  clegg, nick_clegg, sir_nick, global_affairs, deputy_prime
+  curtice, tories, reform_uk, labour_lead, john_curtice
+  councillor, haringey, labour_councillor, hospitality, intent_supply
+  torydiary, today_torydiary, customs_union, sun_yesterday, rudd
+largest topics:
+  [4,583] sue_gray, partygate, downing_street, mr_johnson, downing
+  [2,233] backstop, withdrawal_agreement, irish_backstop, barnier, eu_leaders
+  [1,864] barnier, backstop, irish_border, raab, michel_barnier
+  [1,643] meaningful_vote, mps_vote, brexiteers, withdrawal_agreement, brexit_deal
+  [1,325] liz_truss, conservative_party, new_prime, rishi_sunak, rishi
+
+=== Cluster 21 | topics 1,454 | articles 118,917 (2.8%) | years 6
+keywords: wikileaks, assange, dossier, project_veritas, fisa, secret_service, veritas, nsa, julian_assange, wray, flynn, steele, mccabe, nunes, cia
+medoids:
+  immunity, flynn, subpoena, burr, michael_flynn
+  comey, comey_said, overconfident, fisa, horowitz
+  comey, memos, james_comey, director_james, fbi_director
+  bash, unmasking, obama-era_officials, attorney_john, intelligence_reports
+  intimidation, obstruction, comey_hope, eisen, let_slip
+largest topics:
+  [7,029] weisselberg, trump_organization, allen_weisselberg, manhattan_district, grisham
+  [3,593] mnuchin, coronavirus_relief, relief_package, steven_mnuchin, secretary_steven
+  [1,997] impeachment_trial, witnesses, articles_impeachment, witnesses_documents, senate_trial
+  [1,644] bannon, executive_privilege, steve_bannon, committee_investigating, contempt
+  [1,574] biden_said, biden_told, gaffes, delaware, gaffe
+
+=== Cluster 22 | topics 1,211 | articles 187,819 (4.5%) | years 6
+keywords: tucker_carlson, carlson, tucker, alex_jones, kimmel, michelle_obama, greta, infowars, jimmy, don_lemon, thunberg, greta_thunberg, maddow, hannity, jimmy_kimmel
+medoids:
+  maddow, rachel_maddow, gutfeld, rachel, hannity
+  carlson, media_matters, tucker_carlson, tucker, love_sponge
+  schlussel, debbie_schlussel, hannity, schlussel_said, sean_hannity
+  maddow, maddow_said, rachel_maddow, rachel, msnbc_rachel
+  reid, joy_reid, host_joy, reidout, msnbc_host
+largest topics:
+  [77,659] john_bolton, roger_stone, mary_trump, reade, melania
+  [24,258] acosta, jim_acosta, porter, omarosa, biden
+  [944] leahy, morning_michael, wlac, radio_wlac, wlac_weekdays
+  [926] baldwin, hutchins, alec_baldwin, halyna, alec
+  [836] newsmax, foxnews, ratings, murdoch, ruddy
+
+=== Cluster 23 | topics 1,121 | articles 92,408 (2.2%) | years 6
+keywords: mars, whales, asteroid, volcano, zoo, whale, archaeologists, eruption, birds, planets, earthquake, solar, insects, meteor, shark
+medoids:
+  polar, polar_bears, polar_bear, sea_ice, bears
+  woolly, mammoth, yukon, fossils, cave
+  arctic, permafrost, expedition, sea_ice, glacier
+  whale, whales, sharks, endangered, shark
+  shark, headless, deep-sea, sharks, antarctic
+largest topics:
+  [958] archaeologists, ancient, archaeological, stonehenge, archaeologist
+  [919] zoo, elephants, elephant, giraffe, peta
+  [821] ufos, ufo, phenomena, aerial_phenomena, unidentified_aerial
+  [582] ufos, ufo, phenomena, unidentified_aerial, aerial_phenomena
+  [578] black_hole, astronomers, galaxy, black_holes, galaxies
+
+=== Cluster 24 | topics 973 | articles 81,624 (1.9%) | years 6
+keywords: parenthood, planned_parenthood, fertility, same-sex, pro-life, abortions, births, sex_education, transgender_people, transgender, roe_wade, pronouns, conversion_therapy, roe, trans
+medoids:
+  abortions, elective, clinics, abortion_providers, medical_procedures
+  abortions, abortion_facility, clinics, abortion_facilities, pregnancy
+  usaid, city_policy, c-fam, human_right, reproductive
+  abortion_services, terminations, fatal_foetal, termination, coombe
+  eugenics, population_control, guttmacher, planned_parenthood, parenthood
+largest topics:
+  [1,526] roe, roe_wade, wade, jackson_women, dobbs_jackson
+  [1,507] abortion_bans, clinics, guttmacher, trigger_laws, dobbs
+  [1,214] relationships, toxic, feelings, happiness, narcissists
+  [1,209] texas_law, abortion_providers, heartbeat, abortion_law, texas_abortion
+  [840] domestic_abuse, domestic_violence, helpline, victims_domestic, abusers
+
+=== Cluster 25 | topics 979 | articles 113,533 (2.7%) | years 6
+keywords: voter_registration, voter_id, early_voting, dominion, registration, id, voting_systems, voting_machines, popular_vote, dominion_voting, maps, voter_fraud, machines, fundraising, rnc
+medoids:
+  early_voting, turnout, catalist, ballots_cast, elections_project
+  election_officials, brennan_center, election_workers, center_justice, bipartisan_policy
+  registration, voter_registration, june_runoff, runoff, committee_civil
+  voter, voter_registration, voter_fraud, registration, registrations
+  dunlap, voter_fraud, election_integrity, state_matthew, widespread_voter
+largest topics:
+  [12,758] approval_rating, biden_approval, maga_republicans, rating, state_union
+  [6,602] biden_lead, recount, likely_voters, biden_leads, trump_percent
+  [1,716] bipartisan_infrastructure, moderates, progressive_caucus, jayapal, progressives
+  [1,684] vote-by-mail, in-person_voting, voting_mail, evers, vote_mail
+  [1,471] recall_election, signatures, gavin_newsom, recall_effort, million_signatures
+
+=== Cluster 26 | topics 946 | articles 96,870 (2.3%) | years 6
+keywords: ufc, marathon, djokovic, nadal, wimbledon, runners, serena, federer, nascar, french_open, anti-doping, serena_williams, australian_open, rugby, ioc
+medoids:
+  edmund, kyle_edmund, cuevas, french_open, kyle
+  dubai, lorenzo, djokovic, tennis_championships, novak_djokovic
+  edmund, kyle_edmund, indian_wells, federer, australian_open
+  european_championships, championships, athletics, triathlon, peaty
+  benoit, usta, tennis_association, kristina, tournament
+largest topics:
+  [1,840] ashes, cricket, archer, wickets, stokes
+  [1,721] verstappen, leclerc, grand_prix, prix, max_verstappen
+  [1,383] verstappen, grand_prix, prix, max_verstappen, lewis_hamilton
+  [1,318] lionesses, wiegman, sarina, sarina_wiegman, women_football
+  [1,248] ioc, olympic_committee, international_olympic, tokyo_olympics, spectators
+
+=== Cluster 27 | topics 1,482 | articles 128,229 (3.0%) | years 6
+keywords: lebanese, iraqi, erdogan, taliban, lebanon, beirut, afghan, hezbollah, damascus, yemen, palestinians, baghdad, gaza, crown_prince, kabul
+medoids:
+  daesh, iraqi, iraq, abadi, jaafari
+  arab_league, assad, damascus, al-assad, bin_zayed
+  lebanon, hezbollah, beirut, lebanese, al-sadr
+  libya, dbeibah, bashagha, fathi, libyan
+  idlib, demilitarised, armed_opposition, sochi, jihadists
+largest topics:
+  [2,259] troops_afghanistan, withdraw_troops, withdraw, afghan_government, afghanistan_september
+  [1,776] rouhani, nuclear_deal, irans, tehran, iran_nuclear
+  [1,669] genocide, french_president, macron_said, president_emmanuel, emmanuel_macron
+  [1,184] libya, haftar, libyan, gna, tripoli
+  [1,021] crown_prince, bin_salman, khashoggi, mohammed_bin, prince_mohammed
+
+=== Cluster 28 | topics 1,522 | articles 186,003 (4.4%) | years 6
+keywords: hiv, flu, antibodies, transplant, antibody, antiviral, measles, plague, ivermectin, tumour, pfizer, aids, mosquitoes, influenza, kidney
+medoids:
+  backed_science, villanueva, dph, vaccinated_contracted, expend
+  reinfection, previously_infected, reinfected, lancet, people_elderly
+  blood_products, hepatitis, clarke, hiv, lead_counsel
+  niac, national_immunisation, immunisation_advisory, committee_niac, hse
+  corona, reiner, health_professionals, acu, doctors_health
+largest topics:
+  [6,653] lombardy, health_ministry, conte, south_africa, italians
+  [3,114] astrazeneca, sputnik_v, jab, oxford, million_doses
+  [2,898] passports, booster_jab, jabs, people_aged, vaccine_passports
+  [2,615] hopkins_university, johns_hopkins, johns, million_cases, hopkins
+  [2,496] shanghai, zero-covid, nucleic, nucleic_acid, zero-covid_policy
+
+=== Cluster 29 | topics 1,592 | articles 151,766 (3.6%) | years 6
+keywords: holocaust, antifa, slavery, hitler, auschwitz, nazi, hate_speech, confederate, hate_crimes, hate_crime, martin_luther, statue, nazis, luther_king, jews
+medoids:
+  supremacist_propaganda, extremism, white_supremacist, supremacist, anti-defamation_league
+  hate_crime, new_hate, crime_public, hatred, public_order
+  white_nationalist, afpac, action_conference, america_political, fuentes
+  white_lives, rallies, marches, telegram, white_supremacists
+  adl, splc, hate_groups, patriot, antisemitic
+largest topics:
+  [2,573] border_wall, unaccompanied, separated, families_separated, migrant_children
+  [2,161] antifa, rioting, antifa_terrorist, terrorist_organization, looting
+  [1,794] tyranny, totalitarian, ruling_class, liberty, orwell
+  [1,682] crt, race_theory, critical_race, theory_crt, teaching_critical
+  [1,662] tyranny, liberty, police_state, tyrants, government_power
+
+=== Cluster 30 | topics 859 | articles 78,281 (1.9%) | years 6
+keywords: harvard, admissions, graduation, faculty, devos, grades, tuition, exams, yale, teacher, commencement, student_loan, enrollment, higher_education, math
+medoids:
+  faculty, college_fix, professors, law_school, student_government
+  homecoming, fairmont, services_education, parker, amyotrophic
+  faculty, college_fix, student_government, professors, princeton
+  colleges, higher_education, community_colleges, tuition, colleges_universities
+  drake, regents, uc, board_regents, whitfield
+largest topics:
+  [2,816] remote_learning, school_district, school_year, school_districts, instruction
+  [2,454] faculty, college_fix, student_government, professors, princeton
+  [1,360] faculty, college_fix, professors, law_school, student_government
+  [1,287] student_loan, student_debt, loan_debt, borrowers, student_loans
+  [1,262] semester, colleges, fall_semester, campus, classes
+
+=== Cluster 31 | topics 1,250 | articles 114,107 (2.7%) | years 6
+keywords: iphone, wireless, broadband, ios, samsung, ai, whatsapp, microsoft, apps, artificial_intelligence, facial_recognition, facial, app_store, fcc, hackers
+medoids:
+  iphone, iphone_maker, iphones, billion_active, smartphone
+  uber, hacker, data_breach, cybersecurity, slack
+  ces, consumer_electronics, electronics, gadgets, google_assistant
+  contacts_fight, channels_email, fight_quick, opinion_essential, survival_share
+  cyber, hackers, jalali, cyberattacks, group_hackers
+largest topics:
+  [3,542] cyber, cyberattacks, hackers, security_guarantees, cyberattack
+  [1,822] facebook_share, share_facebook, share_pinterest, pinterest, share_share
+  [1,774] crypto, cryptocurrency, bitcoin, cryptocurrencies, dogecoin
+  [1,689] bitcoin, cryptocurrencies, crypto, cryptocurrency, blockchain
+  [1,604] playstation, xbox, sony, nintendo, console
+
+=== Cluster 32 | topics 1,120 | articles 122,115 (2.9%) | years 6
+keywords: ronaldo, messi, psg, guardiola, cristiano, klopp, bayern, atletico, barca, dortmund, wolves, neymar, everton, inter, mbappe
+medoids:
+  arnautovic, marko, marko_arnautovic, west_ham, pellegrini
+  arnautovic, marko, marko_arnautovic, pellegrini, west_ham
+  koeman, ronald_koeman, barca, benfica, suarez
+  koulibaly, napoli, kalidou, kalidou_koulibaly, laurentiis
+  piatek, gedson_fernandes, gedson, spurs, mourinho
+largest topics:
+  [2,656] solskjaer, ole_gunnar, gunnar, gunnar_solskjaer, ole
+  [2,457] rangnick, hag, cristiano, cristiano_ronaldo, erik_hag
+  [2,282] pogba, fernandes, solskjaer, ole_gunnar, gunnar
+  [1,796] arteta, gunners, mikel_arteta, mikel, aubameyang
+  [1,739] herschel, herschel_walker, warnock, raphael_warnock, raphael

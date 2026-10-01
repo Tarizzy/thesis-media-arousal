@@ -1,0 +1,41 @@
+07_outlet_ordlogit - 2026-09-30 11:34
+57,210 articles, 211 outlets
+cluster and year fixed effects removed 8.2% of article arousal variance before averaging
+
+OUTLET MEAN AROUSAL BY FACTUALITY (z-scored across outlets)
+                outlets  articles    raw  adjusted     sd
+Very Low             16      4099 +0.494    +0.513 +0.609
+Low                  48     13266 +0.129    +0.117 +1.143
+Mixed                60     16668 +0.024    +0.001 +0.898
+Mostly Factual       24      6456 -0.013    +0.004 +0.933
+High                 63     16721 -0.241    -0.222 +1.043
+Spearman rho between factuality and adjusted arousal: -0.175 (p = 0.0108)
+
+=== S1 raw mean arousal   (n = 211, McFadden pseudo-R2 = 0.012, converged = True)
+                 coef     se       z      p     OR  OR 2.5%  OR 97.5%
+arousal_raw_z -0.3458 0.1271 -2.7205 0.0065 0.7077   0.5516    0.9079
+
+=== S2 topic-adjusted arousal   (n = 211, McFadden pseudo-R2 = 0.011, converged = True)
+                 coef     se       z      p     OR  OR 2.5%  OR 97.5%
+arousal_adj_z -0.3334 0.1282 -2.5997 0.0093 0.7165   0.5573    0.9212
+
+=== S3 + bias controls   (n = 211, McFadden pseudo-R2 = 0.336, converged = True)
+                 coef     se       z      p     OR  OR 2.5%  OR 97.5%
+arousal_adj_z -0.5375 0.1546 -3.4774 0.0005 0.5842   0.4315    0.7909
+bias_ext      -2.4214 0.2724 -8.8886 0.0000 0.0888   0.0521    0.1515
+side_left      1.8091 0.9239  1.9580 0.0502 6.1049   0.9982   37.3372
+side_right    -0.2721 0.9382 -0.2900 0.7718 0.7618   0.1211    4.7910
+
+=== S4 excluding flagged outlets   (n = 207, McFadden pseudo-R2 = 0.010, converged = True)
+                 coef     se       z      p     OR  OR 2.5%  OR 97.5%
+arousal_adj_z -0.3203 0.1314 -2.4370 0.0148 0.7260   0.5611    0.9392
+
+PROPORTIONAL ODDS CHECK (separate logits for factuality > k; the ordered logit assumes one slope)
+             cut  n_above    coef     se
+      > Very Low      195 -0.6385 0.2976
+           > Low      147 -0.3321 0.1620
+         > Mixed       87 -0.2762 0.1438
+> Mostly Factual       63 -0.3158 0.1521
+   spread of the four slopes: 0.362; ordered-logit slope -0.333
+
+RESULT: fitted S1-S4, wrote outlet_level.csv and fig_outlet.png in 0s

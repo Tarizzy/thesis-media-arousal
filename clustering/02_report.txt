@@ -1,0 +1,142 @@
+41,705 topics | embeddings (41705, 768)
+sweep sample 15,001 topics | linkage done
+
+RULE: highest silhouette in K = 20-35 with no cluster above 15% -> kmeans, K = 33
+  method  k    sil      ch    db  max_share
+    ward 20  0.012  96.599 5.223      0.083
+complete 20  0.002  74.890 6.790      0.088
+ average 20 -0.003  45.018 3.513      0.457
+  kmeans 20  0.028 133.861 4.384      0.072
+    ward 21  0.011  94.321 5.177      0.083
+complete 21  0.003  73.767 6.737      0.088
+ average 21 -0.004  43.877 3.542      0.457
+  kmeans 21  0.028 129.849 4.324      0.070
+    ward 22  0.012  91.962 5.186      0.083
+complete 22  0.002  71.530 6.692      0.088
+ average 22 -0.008  41.850 3.475      0.457
+  kmeans 22  0.028 126.100 4.358      0.062
+    ward 23  0.012  89.786 5.123      0.083
+complete 23  0.002  70.250 6.532      0.088
+ average 23 -0.008  40.649 3.474      0.457
+  kmeans 23  0.028 122.771 4.354      0.064
+    ward 24  0.012  87.770 5.061      0.083
+complete 24  0.002  68.078 6.593      0.088
+ average 24 -0.010  38.934 3.359      0.457
+  kmeans 24  0.030 120.048 4.261      0.066
+    ward 25  0.012  85.880 4.975      0.083
+complete 25  0.003  66.421 6.648      0.088
+ average 25 -0.006  44.167 3.462      0.299
+  kmeans 25  0.030 116.830 4.196      0.064
+    ward 26  0.012  84.123 4.926      0.083
+complete 26  0.002  65.521 6.573      0.088
+ average 26 -0.005  44.624 3.472      0.299
+  kmeans 26  0.030 114.221 4.243      0.061
+    ward 27  0.012  82.433 4.855      0.083
+complete 27  0.002  64.915 6.463      0.088
+ average 27 -0.008  42.967 3.411      0.298
+  kmeans 27  0.029 111.244 4.196      0.054
+    ward 28  0.013  80.837 4.804      0.083
+complete 28  0.003  63.587 6.410      0.088
+ average 28 -0.004  46.710 3.458      0.298
+  kmeans 28  0.031 108.732 4.185      0.063
+    ward 29  0.013  79.359 4.763      0.083
+complete 29  0.002  62.450 6.354      0.088
+ average 29 -0.005  45.112 3.423      0.298
+  kmeans 29  0.031 106.961 4.149      0.062
+    ward 30  0.012  77.918 4.764      0.083
+complete 30  0.002  61.137 6.303      0.088
+ average 30 -0.002  47.630 3.452      0.212
+  kmeans 30  0.030 104.375 4.193      0.055
+    ward 31  0.012  76.569 4.787      0.083
+complete 31  0.003  59.636 6.292      0.088
+ average 31 -0.002  47.305 3.458      0.212
+  kmeans 31  0.029 102.488 4.124      0.055
+    ward 32  0.012  75.280 4.744      0.083
+complete 32  0.003  58.805 6.223      0.088
+ average 32 -0.002  46.273 3.473      0.212
+  kmeans 32  0.030 100.158 4.149      0.057
+    ward 33  0.013  74.031 4.683      0.083
+complete 33  0.003  57.825 6.157      0.088
+ average 33 -0.002  44.898 3.452      0.212
+  kmeans 33  0.032  99.069 4.000      0.052
+    ward 34  0.013  72.835 4.686      0.083
+complete 34  0.003  57.101 6.078      0.088
+ average 34 -0.003  43.613 3.446      0.212
+  kmeans 34  0.030  97.041 4.047      0.052
+    ward 35  0.013  71.685 4.666      0.083
+complete 35  0.003  56.679 6.016      0.088
+ average 35 -0.002  43.452 3.449      0.202
+  kmeans 35  0.031  94.855 4.138      0.051
+
+seed stability, pairwise ARI over 5 seeds: mean 0.702, min 0.621
+silhouette on all topics (15k sample): 0.0299
+
+Cramer's V cluster x year: 0.095 (shuffled baseline mean 0.027, max 0.030)
+mean YearSpan 6.00 | clusters covering all six years: 33/33
+
+AGREEMENT WITH THE SUPPLIED HYPER-CLUSTERS, WITHIN EACH YEAR
+ year  ari_imbalanced  ami_imbalanced  ari_balanced  ami_balanced
+ 2017           0.024           0.078         0.027         0.067
+ 2018           0.043           0.135         0.062         0.156
+ 2019           0.039           0.124         0.053         0.135
+ 2020           0.037           0.123         0.051         0.137
+ 2021           0.043           0.136         0.063         0.154
+ 2022           0.045           0.145         0.067         0.160
+mean: {'ari_imbalanced': 0.038, 'ami_imbalanced': 0.123, 'ari_balanced': 0.054, 'ami_balanced': 0.135}
+
+CLUSTER SIZES
+         topics  articles  article_pct
+cluster                               
+0          1013     86035         2.05
+1          1043    131313         3.12
+2          1038    105267         2.50
+3           963     68763         1.63
+4          1281    123238         2.93
+5          1229    119790         2.85
+6          1203    115041         2.73
+7           918     74133         1.76
+8          1905    281119         6.68
+9           951    111839         2.66
+10         1098     87320         2.08
+11         1125     94425         2.24
+12         1626    154996         3.68
+13         1991    221112         5.26
+14          804     75783         1.80
+15         1811    170781         4.06
+16         2038    175183         4.16
+17         1435    145201         3.45
+18         1388    148363         3.53
+19         1108    111675         2.65
+20         1228    134024         3.19
+21         1454    118917         2.83
+22         1211    187819         4.46
+23         1121     92408         2.20
+24          973     81624         1.94
+25          979    113533         2.70
+26          946     96870         2.30
+27         1482    128229         3.05
+28         1522    186003         4.42
+29         1592    151766         3.61
+30          859     78281         1.86
+31         1250    114107         2.71
+32         1120    122115         2.90
+
+15 LARGEST TOPICS OVERALL
+ topic_id  year  cluster  n_articles                                                                  representation
+202004216  2020       22       77659                            john_bolton, roger_stone, mary_trump, reade, melania
+201902733  2019        8       48967                             amash, sondland, michael_cohen, yovanovitch, romney
+201802101  2018       22       24258                                      acosta, jim_acosta, porter, omarosa, biden
+202004250  2020       12       23998                          parnas, rushmore, bounties, mount_rushmore, tuberville
+202102808  2021        8       23032               hunter_biden, approval_rating, biden_approval, rating, disapprove
+202204137  2022       19       16383                    special_master, classified_documents, cannon, dearie, aileen
+202102981  2021        8       14996                  liz_cheney, raffensperger, mike_pence, impeach, president_mike
+201700462  2017        8       14517                                   roy_moore, luther_strange, flake, roy, luther
+202204318  2022       25       12758          approval_rating, biden_approval, maga_republicans, rating, state_union
+202203795  2022       13        8132                   pronounced_dead, collision, dead_scene, pronounced, enquiries
+202203801  2022        9        7198                           blaze, chemical_plant, firefighters, bus, firefighter
+202203581  2022        1        7108                                     mariupol, azovstal, bucha, kherson, kharkiv
+202102970  2021       21        7029 weisselberg, trump_organization, allen_weisselberg, manhattan_district, grisham
+202002030  2020        8        6789                     blasio, cuomo_said, mayor_blasio, andrew_cuomo, blasio_said
+202001979  2020       28        6653                        lombardy, health_ministry, conte, south_africa, italians
+
+articles assigned a topic cluster: 4,207,073 of 4,207,073

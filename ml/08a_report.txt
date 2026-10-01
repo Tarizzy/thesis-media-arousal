@@ -1,0 +1,52 @@
+08a_cv_compare - 2026-09-21 11:25
+57,210 articles | 211 outlets | 5-fold, 3 repeats
+flesch_kincaid winsorised to [6.7, 18.6]
+
+CLASSES (the effective sample size for grouped CV is the outlet count)
+                        articles  outlets
+Very Low                    4099       16
+Low                        13266       48
+Mixed                      16668       60
+Mostly Factual              6456       24
+High (incl. Very High)     16721       63
+   all 11 features       random forest  naive k-fold    QWK 0.278 (sd 0.003)  37s
+   all 11 features       random forest  outlet-grouped  QWK 0.241 (sd 0.005)  37s
+   all 11 features       random forest  OOB             QWK 0.280
+   all 11 features       boosting       naive k-fold    QWK 0.268 (sd 0.002)  52s
+   all 11 features       boosting       outlet-grouped  QWK 0.228 (sd 0.003)  52s
+   without fingerprints  random forest  naive k-fold    QWK 0.230 (sd 0.002)  43s
+   without fingerprints  random forest  outlet-grouped  QWK 0.196 (sd 0.004)  44s
+   without fingerprints  random forest  OOB             QWK 0.226
+   without fingerprints  boosting       naive k-fold    QWK 0.216 (sd 0.001)  54s
+   without fingerprints  boosting       outlet-grouped  QWK 0.182 (sd 0.003)  49s
+   bias only (benchmark) random forest  naive k-fold    QWK 0.773 (sd 0.000)  4s
+   bias only (benchmark) random forest  outlet-grouped  QWK 0.727 (sd 0.045)  5s
+   bias only (benchmark) random forest  OOB             QWK 0.773
+   bias only (benchmark) boosting       naive k-fold    QWK 0.773 (sd 0.000)  17s
+   bias only (benchmark) boosting       outlet-grouped  QWK 0.727 (sd 0.045)  18s
+
+QWK BY SCHEME (higher is better; 0 = no better than predicting one class)
+scheme                               naive k-fold  OOB (article bootstrap)  outlet-grouped
+features              model                                                               
+all 11 features       boosting              0.268                      NaN           0.228
+                      random forest         0.278                    0.280           0.241
+bias only (benchmark) boosting              0.773                      NaN           0.727
+                      random forest         0.773                    0.773           0.727
+without fingerprints  boosting              0.216                      NaN           0.182
+                      random forest         0.230                    0.226           0.196
+
+MACRO F1 BY SCHEME
+scheme                               naive k-fold  OOB (article bootstrap)  outlet-grouped
+features              model                                                               
+all 11 features       boosting              0.294                      NaN           0.243
+                      random forest         0.301                    0.301           0.247
+bias only (benchmark) boosting              0.404                      NaN           0.390
+                      random forest         0.404                    0.404           0.390
+without fingerprints  boosting              0.266                      NaN           0.230
+                      random forest         0.272                    0.270           0.234
+
+boosting: naive 0.268 vs grouped 0.228 -> naive overstates QWK by 0.040
+
+random forest: naive 0.278 vs grouped 0.241 -> naive overstates QWK by 0.037
+
+RESULT: wrote 08a_results.csv in 422s

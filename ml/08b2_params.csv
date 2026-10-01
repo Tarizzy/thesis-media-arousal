@@ -1,0 +1,226 @@
+repeat,fold,features,model,n_iter,max_features,min_samples_leaf,learning_rate,max_leaf_nodes
+0,0,text only,ordinal logit,,,,,
+0,1,text only,ordinal logit,,,,,
+0,2,text only,ordinal logit,,,,,
+0,3,text only,ordinal logit,,,,,
+0,4,text only,ordinal logit,,,,,
+0,0,text only,random forest,,sqrt,10.0,,
+0,1,text only,random forest,,sqrt,5.0,,
+0,2,text only,random forest,,sqrt,5.0,,
+0,3,text only,random forest,,sqrt,5.0,,
+0,4,text only,random forest,,sqrt,10.0,,
+0,0,text only,boosting,163.0,,,0.1,7.0
+0,1,text only,boosting,97.0,,,0.1,7.0
+0,2,text only,boosting,124.0,,,0.1,7.0
+0,3,text only,boosting,78.0,,,0.1,7.0
+0,4,text only,boosting,57.0,,,0.1,7.0
+0,0,bias only,ordinal logit,,,,,
+0,1,bias only,ordinal logit,,,,,
+0,2,bias only,ordinal logit,,,,,
+0,3,bias only,ordinal logit,,,,,
+0,4,bias only,ordinal logit,,,,,
+0,0,bias only,random forest,,sqrt,5.0,,
+0,1,bias only,random forest,,sqrt,5.0,,
+0,2,bias only,random forest,,sqrt,5.0,,
+0,3,bias only,random forest,,sqrt,5.0,,
+0,4,bias only,random forest,,sqrt,5.0,,
+0,0,bias only,boosting,74.0,,,0.02,7.0
+0,1,bias only,boosting,96.0,,,0.02,7.0
+0,2,bias only,boosting,2000.0,,,0.02,7.0
+0,3,bias only,boosting,2000.0,,,0.02,7.0
+0,4,bias only,boosting,38.0,,,0.1,7.0
+0,0,text + bias,ordinal logit,,,,,
+0,1,text + bias,ordinal logit,,,,,
+0,2,text + bias,ordinal logit,,,,,
+0,3,text + bias,ordinal logit,,,,,
+0,4,text + bias,ordinal logit,,,,,
+0,0,text + bias,random forest,,sqrt,50.0,,
+0,1,text + bias,random forest,,sqrt,100.0,,
+0,2,text + bias,random forest,,sqrt,100.0,,
+0,3,text + bias,random forest,,0.5,5.0,,
+0,4,text + bias,random forest,,sqrt,5.0,,
+0,0,text + bias,boosting,213.0,,,0.05,7.0
+0,1,text + bias,boosting,95.0,,,0.02,7.0
+0,2,text + bias,boosting,225.0,,,0.02,7.0
+0,3,text + bias,boosting,174.0,,,0.05,7.0
+0,4,text + bias,boosting,69.0,,,0.02,15.0
+1,0,text only,ordinal logit,,,,,
+1,1,text only,ordinal logit,,,,,
+1,2,text only,ordinal logit,,,,,
+1,3,text only,ordinal logit,,,,,
+1,4,text only,ordinal logit,,,,,
+1,0,text only,random forest,,sqrt,10.0,,
+1,1,text only,random forest,,sqrt,10.0,,
+1,2,text only,random forest,,sqrt,5.0,,
+1,3,text only,random forest,,sqrt,5.0,,
+1,4,text only,random forest,,sqrt,20.0,,
+1,0,text only,boosting,216.0,,,0.05,15.0
+1,1,text only,boosting,154.0,,,0.05,7.0
+1,2,text only,boosting,42.0,,,0.05,15.0
+1,3,text only,boosting,327.0,,,0.05,7.0
+1,4,text only,boosting,48.0,,,0.1,7.0
+1,0,bias only,ordinal logit,,,,,
+1,1,bias only,ordinal logit,,,,,
+1,2,bias only,ordinal logit,,,,,
+1,3,bias only,ordinal logit,,,,,
+1,4,bias only,ordinal logit,,,,,
+1,0,bias only,random forest,,sqrt,5.0,,
+1,1,bias only,random forest,,sqrt,5.0,,
+1,2,bias only,random forest,,sqrt,5.0,,
+1,3,bias only,random forest,,sqrt,5.0,,
+1,4,bias only,random forest,,sqrt,5.0,,
+1,0,bias only,boosting,2000.0,,,0.02,7.0
+1,1,bias only,boosting,2000.0,,,0.02,7.0
+1,2,bias only,boosting,807.0,,,0.1,7.0
+1,3,bias only,boosting,75.0,,,0.02,7.0
+1,4,bias only,boosting,98.0,,,0.02,7.0
+1,0,text + bias,ordinal logit,,,,,
+1,1,text + bias,ordinal logit,,,,,
+1,2,text + bias,ordinal logit,,,,,
+1,3,text + bias,ordinal logit,,,,,
+1,4,text + bias,ordinal logit,,,,,
+1,0,text + bias,random forest,,sqrt,100.0,,
+1,1,text + bias,random forest,,sqrt,50.0,,
+1,2,text + bias,random forest,,sqrt,10.0,,
+1,3,text + bias,random forest,,sqrt,5.0,,
+1,4,text + bias,random forest,,sqrt,20.0,,
+1,0,text + bias,boosting,196.0,,,0.02,7.0
+1,1,text + bias,boosting,171.0,,,0.05,7.0
+1,2,text + bias,boosting,117.0,,,0.1,7.0
+1,3,text + bias,boosting,78.0,,,0.02,7.0
+1,4,text + bias,boosting,61.0,,,0.05,7.0
+2,0,text only,ordinal logit,,,,,
+2,1,text only,ordinal logit,,,,,
+2,2,text only,ordinal logit,,,,,
+2,3,text only,ordinal logit,,,,,
+2,4,text only,ordinal logit,,,,,
+2,0,text only,random forest,,sqrt,5.0,,
+2,1,text only,random forest,,sqrt,5.0,,
+2,2,text only,random forest,,sqrt,5.0,,
+2,3,text only,random forest,,sqrt,5.0,,
+2,4,text only,random forest,,sqrt,10.0,,
+2,0,text only,boosting,62.0,,,0.1,15.0
+2,1,text only,boosting,66.0,,,0.1,7.0
+2,2,text only,boosting,116.0,,,0.1,7.0
+2,3,text only,boosting,128.0,,,0.05,7.0
+2,4,text only,boosting,83.0,,,0.05,7.0
+2,0,bias only,ordinal logit,,,,,
+2,1,bias only,ordinal logit,,,,,
+2,2,bias only,ordinal logit,,,,,
+2,3,bias only,ordinal logit,,,,,
+2,4,bias only,ordinal logit,,,,,
+2,0,bias only,random forest,,sqrt,5.0,,
+2,1,bias only,random forest,,sqrt,5.0,,
+2,2,bias only,random forest,,sqrt,5.0,,
+2,3,bias only,random forest,,sqrt,5.0,,
+2,4,bias only,random forest,,sqrt,5.0,,
+2,0,bias only,boosting,2000.0,,,0.02,7.0
+2,1,bias only,boosting,87.0,,,0.02,7.0
+2,2,bias only,boosting,2000.0,,,0.02,7.0
+2,3,bias only,boosting,2000.0,,,0.02,7.0
+2,4,bias only,boosting,2000.0,,,0.02,7.0
+2,0,text + bias,ordinal logit,,,,,
+2,1,text + bias,ordinal logit,,,,,
+2,2,text + bias,ordinal logit,,,,,
+2,3,text + bias,ordinal logit,,,,,
+2,4,text + bias,ordinal logit,,,,,
+2,0,text + bias,random forest,,sqrt,100.0,,
+2,1,text + bias,random forest,,sqrt,5.0,,
+2,2,text + bias,random forest,,sqrt,5.0,,
+2,3,text + bias,random forest,,sqrt,5.0,,
+2,4,text + bias,random forest,,0.5,100.0,,
+2,0,text + bias,boosting,253.0,,,0.02,7.0
+2,1,text + bias,boosting,97.0,,,0.1,15.0
+2,2,text + bias,boosting,403.0,,,0.02,7.0
+2,3,text + bias,boosting,141.0,,,0.05,7.0
+2,4,text + bias,boosting,192.0,,,0.02,7.0
+3,0,text only,ordinal logit,,,,,
+3,1,text only,ordinal logit,,,,,
+3,2,text only,ordinal logit,,,,,
+3,3,text only,ordinal logit,,,,,
+3,4,text only,ordinal logit,,,,,
+3,0,text only,random forest,,sqrt,5.0,,
+3,1,text only,random forest,,sqrt,5.0,,
+3,2,text only,random forest,,sqrt,20.0,,
+3,3,text only,random forest,,sqrt,5.0,,
+3,4,text only,random forest,,sqrt,10.0,,
+3,0,text only,boosting,103.0,,,0.1,7.0
+3,1,text only,boosting,83.0,,,0.02,7.0
+3,2,text only,boosting,65.0,,,0.1,15.0
+3,3,text only,boosting,58.0,,,0.05,7.0
+3,4,text only,boosting,69.0,,,0.1,15.0
+3,0,bias only,ordinal logit,,,,,
+3,1,bias only,ordinal logit,,,,,
+3,2,bias only,ordinal logit,,,,,
+3,3,bias only,ordinal logit,,,,,
+3,4,bias only,ordinal logit,,,,,
+3,0,bias only,random forest,,sqrt,5.0,,
+3,1,bias only,random forest,,sqrt,5.0,,
+3,2,bias only,random forest,,sqrt,5.0,,
+3,3,bias only,random forest,,sqrt,5.0,,
+3,4,bias only,random forest,,sqrt,5.0,,
+3,0,bias only,boosting,142.0,,,0.02,7.0
+3,1,bias only,boosting,111.0,,,0.02,7.0
+3,2,bias only,boosting,99.0,,,0.02,7.0
+3,3,bias only,boosting,1993.0,,,0.02,7.0
+3,4,bias only,boosting,90.0,,,0.02,7.0
+3,0,text + bias,ordinal logit,,,,,
+3,1,text + bias,ordinal logit,,,,,
+3,2,text + bias,ordinal logit,,,,,
+3,3,text + bias,ordinal logit,,,,,
+3,4,text + bias,ordinal logit,,,,,
+3,0,text + bias,random forest,,sqrt,100.0,,
+3,1,text + bias,random forest,,sqrt,5.0,,
+3,2,text + bias,random forest,,sqrt,5.0,,
+3,3,text + bias,random forest,,sqrt,5.0,,
+3,4,text + bias,random forest,,sqrt,5.0,,
+3,0,text + bias,boosting,129.0,,,0.02,7.0
+3,1,text + bias,boosting,121.0,,,0.02,7.0
+3,2,text + bias,boosting,117.0,,,0.02,7.0
+3,3,text + bias,boosting,59.0,,,0.1,7.0
+3,4,text + bias,boosting,80.0,,,0.02,7.0
+4,0,text only,ordinal logit,,,,,
+4,1,text only,ordinal logit,,,,,
+4,2,text only,ordinal logit,,,,,
+4,3,text only,ordinal logit,,,,,
+4,4,text only,ordinal logit,,,,,
+4,0,text only,random forest,,sqrt,20.0,,
+4,1,text only,random forest,,sqrt,5.0,,
+4,2,text only,random forest,,sqrt,5.0,,
+4,3,text only,random forest,,sqrt,5.0,,
+4,4,text only,random forest,,sqrt,5.0,,
+4,0,text only,boosting,58.0,,,0.05,15.0
+4,1,text only,boosting,96.0,,,0.05,15.0
+4,2,text only,boosting,51.0,,,0.1,7.0
+4,3,text only,boosting,88.0,,,0.05,31.0
+4,4,text only,boosting,104.0,,,0.05,7.0
+4,0,bias only,ordinal logit,,,,,
+4,1,bias only,ordinal logit,,,,,
+4,2,bias only,ordinal logit,,,,,
+4,3,bias only,ordinal logit,,,,,
+4,4,bias only,ordinal logit,,,,,
+4,0,bias only,random forest,,sqrt,5.0,,
+4,1,bias only,random forest,,sqrt,5.0,,
+4,2,bias only,random forest,,sqrt,5.0,,
+4,3,bias only,random forest,,sqrt,5.0,,
+4,4,bias only,random forest,,sqrt,5.0,,
+4,0,bias only,boosting,99.0,,,0.02,7.0
+4,1,bias only,boosting,112.0,,,0.02,7.0
+4,2,bias only,boosting,2000.0,,,0.02,7.0
+4,3,bias only,boosting,132.0,,,0.02,7.0
+4,4,bias only,boosting,136.0,,,0.02,7.0
+4,0,text + bias,ordinal logit,,,,,
+4,1,text + bias,ordinal logit,,,,,
+4,2,text + bias,ordinal logit,,,,,
+4,3,text + bias,ordinal logit,,,,,
+4,4,text + bias,ordinal logit,,,,,
+4,0,text + bias,random forest,,sqrt,5.0,,
+4,1,text + bias,random forest,,sqrt,5.0,,
+4,2,text + bias,random forest,,sqrt,10.0,,
+4,3,text + bias,random forest,,sqrt,5.0,,
+4,4,text + bias,random forest,,sqrt,5.0,,
+4,0,text + bias,boosting,158.0,,,0.02,7.0
+4,1,text + bias,boosting,121.0,,,0.02,7.0
+4,2,text + bias,boosting,253.0,,,0.02,7.0
+4,3,text + bias,boosting,224.0,,,0.02,7.0
+4,4,text + bias,boosting,194.0,,,0.02,15.0

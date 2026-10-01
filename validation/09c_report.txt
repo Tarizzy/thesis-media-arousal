@@ -1,0 +1,36 @@
+09c_what_humans_saw - 120 rated items joined to their features, 3 coder(s): coder2, taner, tarik
+
+WHAT THE HUMAN RATING ACTUALLY TRACKS (Spearman with the human rating, 120 items)
+                       rho      p  mean at human 0  mean at human 2
+feature                                                            
+flesch_kincaid      -0.314 +0.000            13.01            10.91
+attribution_density -0.289 +0.001           +0.013           +0.007
+caps_ratio          +0.278 +0.002           +0.000           +0.001
+dominance           -0.202 +0.027           +0.152           +0.122
+log_length          +0.172 +0.061           +6.052           +6.437
+valence             -0.162 +0.076           +0.143           +0.112
+exclamation_rate    +0.153 +0.094           +0.002           +0.015
+certainty           +0.140 +0.127           +0.000           +0.001
+arousal_allwords    +0.063 +0.494           -0.030           -0.025
+hedging             -0.041 +0.657           +0.004           +0.003
+mtld                +0.023 +0.799           108.89           113.02
+arousal             -0.005 +0.958           -0.022           -0.024
+
+   strongest: flesch_kincaid (rho -0.314, p 0.0005)  <- the emotion lexicon is NOT the closest match to human judgement
+
+SPREAD BETWEEN THE HUMAN EXTREMES, in SDs of that feature across the whole corpus
+   arousal             -0.03 SD
+   valence             -0.42 SD
+   dominance           -0.52 SD
+   attribution_density -0.68 SD
+   hedging             -0.25 SD
+   certainty           +0.33 SD
+   caps_ratio          +0.20 SD
+   exclamation_rate    +0.39 SD
+   flesch_kincaid      -0.81 SD
+   mtld                +0.15 SD
+   log_length          +0.64 SD
+   arousal_allwords    +0.16 SD
+
+ATTENUATION: coder-to-coder Spearman 0.539 over 120 items, so the highest correlation any
+   measure could reach against this criterion is about 0.73. Compare that with the observed values above.

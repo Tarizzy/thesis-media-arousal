@@ -1,0 +1,144 @@
+08b2_nested_full - 2026-09-21 19:53 - 57,210 articles, 211 outlets
+outer 5-fold x 5 repeats, inner 4-fold, all grouped by outlet | 2,000 bootstrap draws
+grid random forest (10 settings): [{'max_features': 'sqrt', 'min_samples_leaf': 5}, {'max_features': 'sqrt', 'min_samples_leaf': 10}, {'max_features': 'sqrt', 'min_samples_leaf': 20}, {'max_features': 'sqrt', 'min_samples_leaf': 50}, {'max_features': 'sqrt', 'min_samples_leaf': 100}, {'max_features': 0.5, 'min_samples_leaf': 5}, {'max_features': 0.5, 'min_samples_leaf': 10}, {'max_features': 0.5, 'min_samples_leaf': 20}, {'max_features': 0.5, 'min_samples_leaf': 50}, {'max_features': 0.5, 'min_samples_leaf': 100}]
+grid boosting (9 settings): [{'learning_rate': 0.02, 'max_leaf_nodes': 7}, {'learning_rate': 0.02, 'max_leaf_nodes': 15}, {'learning_rate': 0.02, 'max_leaf_nodes': 31}, {'learning_rate': 0.05, 'max_leaf_nodes': 7}, {'learning_rate': 0.05, 'max_leaf_nodes': 15}, {'learning_rate': 0.05, 'max_leaf_nodes': 31}, {'learning_rate': 0.1, 'max_leaf_nodes': 7}, {'learning_rate': 0.1, 'max_leaf_nodes': 15}, {'learning_rate': 0.1, 'max_leaf_nodes': 31}]
+boosting: up to 2000 rounds, early stopping after 30 rounds without improvement on an outlet-grouped validation split
+   rep 0  text only   ordinal logit  article QWK 0.230  outlet QWK 0.450  (10s)
+   rep 0  text only   random forest  article QWK 0.239  outlet QWK 0.521  (1423s)
+   rep 0  text only   boosting       article QWK 0.230  outlet QWK 0.527  (1014s)
+   rep 0  bias only   ordinal logit  article QWK 0.666  outlet QWK 0.679  (5s)
+   rep 0  bias only   random forest  article QWK 0.750  outlet QWK 0.758  (131s)
+   rep 0  bias only   boosting       article QWK 0.750  outlet QWK 0.758  (3282s)
+   rep 0  text + bias ordinal logit  article QWK 0.696  outlet QWK 0.686  (23s)
+   rep 0  text + bias random forest  article QWK 0.718  outlet QWK 0.754  (1524s)
+   rep 0  text + bias boosting       article QWK 0.720  outlet QWK 0.737  (1370s)
+   rep 1  text only   ordinal logit  article QWK 0.231  outlet QWK 0.500  (13s)
+   rep 1  text only   random forest  article QWK 0.231  outlet QWK 0.527  (1641s)
+   rep 1  text only   boosting       article QWK 0.224  outlet QWK 0.544  (906s)
+   rep 1  bias only   ordinal logit  article QWK 0.657  outlet QWK 0.675  (5s)
+   rep 1  bias only   random forest  article QWK 0.709  outlet QWK 0.720  (132s)
+   rep 1  bias only   boosting       article QWK 0.709  outlet QWK 0.720  (3656s)
+   rep 1  text + bias ordinal logit  article QWK 0.682  outlet QWK 0.684  (25s)
+   rep 1  text + bias random forest  article QWK 0.708  outlet QWK 0.712  (1499s)
+   rep 1  text + bias boosting       article QWK 0.714  outlet QWK 0.742  (1393s)
+   rep 2  text only   ordinal logit  article QWK 0.231  outlet QWK 0.487  (13s)
+   rep 2  text only   random forest  article QWK 0.242  outlet QWK 0.570  (1636s)
+   rep 2  text only   boosting       article QWK 0.237  outlet QWK 0.585  (884s)
+   rep 2  bias only   ordinal logit  article QWK 0.661  outlet QWK 0.670  (5s)
+   rep 2  bias only   random forest  article QWK 0.672  outlet QWK 0.678  (134s)
+   rep 2  bias only   boosting       article QWK 0.665  outlet QWK 0.671  (4231s)
+   rep 2  text + bias ordinal logit  article QWK 0.698  outlet QWK 0.727  (22s)
+   rep 2  text + bias random forest  article QWK 0.709  outlet QWK 0.723  (1486s)
+   rep 2  text + bias boosting       article QWK 0.709  outlet QWK 0.732  (1451s)
+   rep 3  text only   ordinal logit  article QWK 0.229  outlet QWK 0.515  (13s)
+   rep 3  text only   random forest  article QWK 0.243  outlet QWK 0.605  (1626s)
+   rep 3  text only   boosting       article QWK 0.226  outlet QWK 0.588  (995s)
+   rep 3  bias only   ordinal logit  article QWK 0.659  outlet QWK 0.672  (5s)
+   rep 3  bias only   random forest  article QWK 0.758  outlet QWK 0.766  (130s)
+   rep 3  bias only   boosting       article QWK 0.758  outlet QWK 0.766  (2241s)
+   rep 3  text + bias ordinal logit  article QWK 0.705  outlet QWK 0.717  (22s)
+   rep 3  text + bias random forest  article QWK 0.715  outlet QWK 0.727  (1483s)
+   rep 3  text + bias boosting       article QWK 0.726  outlet QWK 0.748  (1049s)
+   rep 4  text only   ordinal logit  article QWK 0.233  outlet QWK 0.533  (13s)
+   rep 4  text only   random forest  article QWK 0.237  outlet QWK 0.592  (1608s)
+   rep 4  text only   boosting       article QWK 0.227  outlet QWK 0.574  (811s)
+   rep 4  bias only   ordinal logit  article QWK 0.639  outlet QWK 0.651  (4s)
+   rep 4  bias only   random forest  article QWK 0.746  outlet QWK 0.757  (124s)
+   rep 4  bias only   boosting       article QWK 0.746  outlet QWK 0.757  (3185s)
+   rep 4  text + bias ordinal logit  article QWK 0.688  outlet QWK 0.692  (22s)
+   rep 4  text + bias random forest  article QWK 0.723  outlet QWK 0.744  (6187s)
+   rep 4  text + bias boosting       article QWK 0.724  outlet QWK 0.750  (512s)
+
+====================================================================================================
+FINAL PERFORMANCE ON UNSEEN OUTLETS (mean over repeats, 95% outlet-bootstrap CI)
+   majority-class baseline (always 'High'): QWK 0 | accuracy 0.292 articles, 0.299 outlets | macro F1 0.090, 0.092
+
+   ARTICLE LEVEL
+   features    model              QWK CI                 accuracy CI                 macro F1 CI
+   text only   ordinal logit    0.231 [+0.183, +0.273]      0.348 [+0.314, +0.384]      0.221 [+0.204, +0.235]  
+   text only   random forest    0.239 [+0.195, +0.279]      0.321 [+0.297, +0.347]      0.251 [+0.236, +0.264]  
+   text only   boosting         0.229 [+0.182, +0.272]      0.256 [+0.239, +0.275]      0.236 [+0.220, +0.250]  
+   bias only   ordinal logit    0.656 [+0.569, +0.733]      0.558 [+0.490, +0.624]      0.372 [+0.327, +0.409]  
+   bias only   random forest    0.727 [+0.663, +0.783]      0.434 [+0.372, +0.497]      0.380 [+0.324, +0.434]  
+   bias only   boosting         0.726 [+0.661, +0.782]      0.436 [+0.374, +0.497]      0.380 [+0.324, +0.433]  
+   text + bias ordinal logit    0.694 [+0.624, +0.756]      0.566 [+0.503, +0.628]      0.383 [+0.343, +0.418]  
+   text + bias random forest    0.715 [+0.652, +0.767]      0.501 [+0.449, +0.553]      0.398 [+0.360, +0.431]  
+   text + bias boosting         0.719 [+0.657, +0.770]      0.460 [+0.408, +0.511]      0.394 [+0.352, +0.432]  
+
+   OUTLET LEVEL
+   features    model              QWK CI                 accuracy CI                 macro F1 CI
+   text only   ordinal logit    0.497 [+0.415, +0.573]      0.416 [+0.355, +0.482]      0.235 [+0.200, +0.271]  
+   text only   random forest    0.563 [+0.475, +0.637]      0.482 [+0.421, +0.546]      0.324 [+0.285, +0.362]  
+   text only   boosting         0.564 [+0.471, +0.647]      0.403 [+0.342, +0.464]      0.345 [+0.289, +0.395]  
+   bias only   ordinal logit    0.670 [+0.586, +0.743]      0.563 [+0.494, +0.627]      0.376 [+0.332, +0.412]  
+   bias only   random forest    0.736 [+0.674, +0.790]      0.447 [+0.387, +0.509]      0.392 [+0.337, +0.445]  
+   bias only   boosting         0.734 [+0.672, +0.788]      0.448 [+0.388, +0.509]      0.392 [+0.337, +0.445]  
+   text + bias ordinal logit    0.701 [+0.631, +0.764]      0.572 [+0.504, +0.635]      0.382 [+0.340, +0.417]  
+   text + bias random forest    0.732 [+0.665, +0.787]      0.521 [+0.459, +0.582]      0.390 [+0.344, +0.433]  
+   text + bias boosting         0.742 [+0.679, +0.792]      0.467 [+0.406, +0.528]      0.393 [+0.339, +0.445]  
+
+   PAIRED DIFFERENCES (outlet level)
+   text+bias minus bias   ordinal logit  QWK      +0.032 [+0.006, +0.065]  P(>0) 1.00
+   text+bias minus bias   ordinal logit  accuracy +0.009 [+0.001, +0.018]  P(>0) 0.99
+   text+bias minus bias   ordinal logit  macro F1 +0.006 [+0.001, +0.012]  P(>0) 0.99
+   text+bias minus bias   random forest  QWK      -0.004 [-0.033, +0.030]  P(>0) 0.41
+   text+bias minus bias   random forest  accuracy +0.074 [+0.026, +0.125]  P(>0) 1.00
+   text+bias minus bias   random forest  macro F1 -0.002 [-0.049, +0.047]  P(>0) 0.49
+   text+bias minus bias   boosting       QWK      +0.007 [-0.019, +0.037]  P(>0) 0.70
+   text+bias minus bias   boosting       accuracy +0.019 [-0.014, +0.053]  P(>0) 0.85
+   text+bias minus bias   boosting       macro F1 +0.002 [-0.040, +0.039]  P(>0) 0.54
+   text only: random forest minus ordinal logit   QWK +0.066 [+0.003, +0.126]  P(>0) 0.98
+   text only: boosting minus ordinal logit   QWK +0.066 [+0.006, +0.128]  P(>0) 0.98
+
+====================================================================================================
+BREAKDOWN BY OUTLET GROUP (outlet level, mean over repeats; 95% CI from resampling outlets
+within the group). error = predicted minus true class, in factuality steps: < 0 means the model rates the
+group's outlets LESS factual than MBFC does, > 0 MORE factual.
+
+   text only | boosting
+   group                        outlets  accuracy  mean |error|  mean error  95% CI of mean error
+   ext: 0 least biased               11      0.35          1.04       -0.85  [-1.60, -0.25]
+   ext: 1 left/right-center          64      0.51          0.68       -0.05  [-0.28, +0.18]
+   ext: 2 left/right                 89      0.32          1.19       -0.31  [-0.62, -0.01]
+   ext: 3 extreme left/right         47      0.43          0.77       +0.11  [-0.18, +0.41]
+   side: centre                      11      0.35          1.04       -0.85  [-1.60, -0.25]
+   side: left                        82      0.41          1.05       -0.29  [-0.60, +0.02]
+   side: right                      118      0.41          0.84       -0.01  [-0.20, +0.18]
+   country: USA                     173      0.40          0.93       -0.16  [-0.36, +0.02]
+   country: United Kingdom           15      0.31          1.09       -0.21  [-0.84, +0.52]
+   country: other                    23      0.48          0.81       -0.15  [-0.57, +0.30]
+
+   text only | random forest
+   group                        outlets  accuracy  mean |error|  mean error  95% CI of mean error
+   ext: 0 least biased               11      0.49          0.85       -0.67  [-1.29, -0.11]
+   ext: 1 left/right-center          64      0.59          0.62       +0.06  [-0.17, +0.30]
+   ext: 2 left/right                 89      0.44          0.89       +0.13  [-0.13, +0.37]
+   ext: 3 extreme left/right         47      0.41          0.86       +0.79  [+0.57, +1.04]
+   side: centre                      11      0.49          0.85       -0.67  [-1.29, -0.11]
+   side: left                        82      0.51          0.85       -0.07  [-0.33, +0.20]
+   side: right                      118      0.46          0.76       +0.49  [+0.33, +0.66]
+   country: USA                     173      0.47          0.79       +0.21  [+0.05, +0.38]
+   country: United Kingdom           15      0.64          0.72       +0.05  [-0.52, +0.69]
+   country: other                    23      0.49          0.90       +0.32  [-0.17, +0.81]
+
+   text + bias | boosting
+   group                        outlets  accuracy  mean |error|  mean error  95% CI of mean error
+   ext: 0 least biased               11      0.64          0.36       +0.00  [-0.27, +0.29]
+   ext: 1 left/right-center          64      0.57          0.62       +0.31  [+0.09, +0.54]
+   ext: 2 left/right                 89      0.42          0.70       +0.21  [+0.01, +0.40]
+   ext: 3 extreme left/right         47      0.37          0.69       -0.45  [-0.65, -0.24]
+   side: centre                      11      0.64          0.36       +0.00  [-0.27, +0.29]
+   side: left                        82      0.48          0.69       +0.23  [+0.03, +0.45]
+   side: right                      118      0.44          0.66       -0.02  [-0.18, +0.15]
+   country: USA                     173      0.45          0.64       -0.02  [-0.14, +0.11]
+   country: United Kingdom           15      0.69          0.47       +0.20  [-0.20, +0.67]
+   country: other                    23      0.42          0.90       +0.75  [+0.32, +1.19]
+
+CHOSEN SETTINGS (how often each value won an outer fold, over all feature sets and repeats)
+   random forest: max_features: sqrt: 73, 0.5: 2 | min_samples_leaf: 5: 55, 10: 8, 100: 6, 20: 4, 50: 2
+      most frequent value on the edge of the grid for: ['max_features', 'min_samples_leaf']
+   boosting: learning_rate: 0.02: 41, 0.1: 18, 0.05: 16 | max_leaf_nodes: 7: 64, 15: 10, 31: 1
+      most frequent value on the edge of the grid for: ['learning_rate', 'max_leaf_nodes']
+   boosting rounds chosen by early stopping: median 117, range 38-2000; hit the 2000-round cap in 9 of 75 fits
+
+RESULT: wrote 08b2_runs.csv, 08b2_estimates.csv, 08b2_breakdown.csv, 08b2_params.csv, 08b2_outlet_rows.parquet in 799 min

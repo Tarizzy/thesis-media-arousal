@@ -1,0 +1,40 @@
+PATHS
+  ~/thesis: exists=True symlink=False -> /Users/habibismac/thesis
+  ~/thesis/data: exists=True symlink=True -> /Users/habibismac/Desktop/thesis/data
+  ~/thesis/final_sample.xlsx: exists=True symlink=True -> /Users/habibismac/Desktop/thesis/final_sample.xlsx
+  ~/Desktop/thesis: exists=True symlink=False -> /Users/habibismac/Desktop/thesis
+
+CONTENTS OF ~/Desktop/thesis
+   .DS_Store
+   NRC-VAD-Lexicon-v2.1
+   NRC-VAD-Lexicon-v2.1.zip
+   Thesis Sample.xlsx
+   __pycache__
+   build_final_sample.py
+   build_manifest.py
+   data
+   explore_db.py
+   explore_sources.py
+   final_sample+NELdata.xlsx
+   final_sample.xlsx
+   political_pattern.txt
+   source_manifest.csv
+   source_manifest_eligible.csv
+
+PROJECT FILES
+  political_pattern.txt: ['/Users/habibismac/Desktop/thesis/political_pattern.txt']
+  EXCLUSIONS.md: NOT FOUND
+  build_final_sample.py: ['/Users/habibismac/Desktop/thesis/build_final_sample.py']
+
+WORKBOOK SHEETS
+  Eligible: 212 rows, columns ['source', 'domain', 'n_articles', 'n_political', 'political_share', 'label', 'bias', 'factuality', 'credibility', 'type', 'country', 'conspiracy', 'pseudosci', 'check_date', 'adfontes_bias', 'adfontes_reliability', 'match_notes']
+  All_With_Reasons: 488 rows, columns ['source', 'domain', 'n_articles', 'n_political', 'political_share', 'label', 'bias', 'factuality', 'credibility', 'type', 'country', 'conspiracy', 'pseudosci', 'check_date', 'cut_reason']
+    sources also in Eligible: 212
+  Share_Calibration: 221 rows, columns ['source', 'domain', 'n_articles', 'n_political', 'political_share', 'label', 'bias', 'factuality', 'credibility', 'type', 'country', 'conspiracy', 'pseudosci', 'check_date', 'cut_reason']
+    sources also in Eligible: 212
+  Funnel: 6 rows, columns ['stage', 'n']
+
+ELIGIBLE SHEET CHECKS
+  rows 212, non-null source 212, unique 212, unique after strip/lower 212
+  n_political < 200: []
+  political_share < 0.10: []

@@ -1,0 +1,9 @@
+05d_words - 2026-09-20 20:28 - cap 60 articles per outlet x cluster
+sampled 265,501 political articles in 15s
+vocabulary 10,000 words, 73,148,870 tokens kept after 28s
+word_counts.parquet: 18,797,844 rows | 211 outlets | 33 clusters | 73,148,870 tokens
+outlet x cluster cells with articles: 6,699 of 6,963 | median articles per cell 57 | cells at the cap: 49%
+thinnest clusters (sampled articles): 14:1,181, 26:3,643, 32:3,870, 23:4,965, 17:5,023
+most frequent words: said, trump, president, people, new, biden, state, government, house, time, year, states, even, election, many
+
+RESULT: OK - total 56s

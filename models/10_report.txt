@@ -1,0 +1,27 @@
+10_robustness - 2026-09-23 11:14 - 57210 articles, 211 outlets, 32 clusters
+bootstrap draws 500, leave-one-out refits 211 outlets + 32 clusters, 6 cores
+   1 primary (M3)               b1 -0.0325 (p 0.007)  b2 -0.0999 (p 0.042)  b3 +0.0004 (p 0.914)  n=57210  1s
+   2 + bias extremity           b1 -0.0599 (p 0.001)  b2 -0.0999 (p 0.042)  b3 +0.0004 (p 0.899)  n=57210  1s
+   3 common support (ext 2)     b1 -0.0243 (p 0.367)  b2 -0.0870 (p 0.054)  b3 -0.0052 (p 0.374)  n=24915  0s
+   4 weighted by matched words  b1 -0.0298 (p 0.010)  b2 -0.0898 (p 0.061)  b3 +0.0028 (p 0.327)  n=57210  1s
+   5 + article length           b1 -0.0272 (p 0.021)  b2 -0.0990 (p 0.044)  b3 +0.0004 (p 0.896)  n=57210  1s
+   6 without outlier outlets    b1 -0.0306 (p 0.005)  b2 -0.1012 (p 0.040)  b3 +0.0007 (p 0.839)  n=56019  1s
+   7 US outlets only            b1 -0.0248 (p 0.053)  b2 -0.1018 (p 0.042)  b3 +0.0059 (p 0.107)  n=47117  1s
+   8 unfiltered sample          b1 -0.0456 (p 0.000)  b2 -0.0798 (p 0.155)  b3 +0.0043 (p 0.194)  n=57376  1s
+   9 + year                     b1 -0.0332 (p 0.006)  b2 -0.1004 (p 0.040)  b3 +0.0008 (p 0.802)  n=57210  1s
+   10 all-words arousal         b1 -0.0466 (p 0.000)  b2 -0.0990 (p 0.032)  b3 -0.0002 (p 0.952)  n=57210  1s
+
+OUTLET BOOTSTRAP (resample the outlets with replacement, refit each time)
+   fact_c         -0.0327  95% CI [-0.0556, -0.0105]  P(<0) 1.00  (500 of 500 draws converged)
+   part_z         -0.1005  95% CI [-0.1142, -0.0878]  P(<0) 1.00  (500 of 500 draws converged)
+   fact_c:part_z  +0.0001  95% CI [-0.0069, +0.0077]  P(<0) 0.50  (500 of 500 draws converged)
+
+INFLUENCE: refit leaving out one outlet, then one topic cluster, at a time
+   leave out one source              fact_c         range [-0.0357, -0.0299]; largest shift dropping nowtheendbegins (-0.0032)
+   leave out one source              part_z         range [-0.1014, -0.0981]; largest shift dropping endtimeheadlines (+0.0018)
+   leave out one source              fact_c:part_z  range [-0.0006, +0.0015]; largest shift dropping pravadareport (+0.0012)
+   leave out one topic_cluster_model fact_c         range [-0.0373, -0.0299]; largest shift dropping 21 (-0.0048)
+   leave out one topic_cluster_model part_z         range [-0.1345, -0.0733]; largest shift dropping 24 (-0.0346)
+   leave out one topic_cluster_model fact_c:part_z  range [-0.0063, +0.0024]; largest shift dropping 21 (-0.0066)
+
+RESULT: wrote 10_spec_table.csv, 10_bootstrap.csv, 10_influence.csv, fig_10_influence.png

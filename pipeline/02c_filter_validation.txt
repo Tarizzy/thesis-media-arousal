@@ -1,0 +1,82 @@
+1. KEYWORD FILTER vs YOUR 300 LABELS (95% intervals in brackets)
+    headlines labelled_political         precision            recall
+v1        300                216  0.98 [0.94-1.00]  0.54 [0.47-0.60]
+v2        300                216  0.98 [0.94-0.99]  0.65 [0.58-0.71]
+v21       300                216  0.98 [0.94-0.99]  0.65 [0.59-0.71]
+
+BY OUTLET FACTUALITY (v1 and v2.1)
+           group list  headlines  labelled_political        precision           recall
+1 High/Very High   v1         93                  62 1.00 [0.86-1.00] 0.39 [0.28-0.51]
+1 High/Very High  v21         93                  62 1.00 [0.89-1.00] 0.52 [0.39-0.64]
+2 Mostly Factual   v1         49                  36 1.00 [0.84-1.00] 0.56 [0.40-0.70]
+2 Mostly Factual  v21         49                  36 1.00 [0.85-1.00] 0.61 [0.45-0.75]
+         3 Mixed   v1        109                  78 0.96 [0.87-0.99] 0.62 [0.50-0.72]
+         3 Mixed  v21        109                  78 0.97 [0.89-0.99] 0.77 [0.66-0.85]
+  4 Low/Very Low   v1         49                  40 1.00 [0.86-1.00] 0.60 [0.45-0.74]
+  4 Low/Very Low  v21         49                  40 0.96 [0.82-0.99] 0.68 [0.52-0.80]
+
+BY YEAR (v2.1)
+ year  headlines  labelled_political        precision           recall
+ 2017         50                  44 1.00 [0.90-1.00] 0.82 [0.68-0.90]
+ 2018         50                  35 1.00 [0.85-1.00] 0.63 [0.46-0.77]
+ 2019         50                  31 0.95 [0.78-0.99] 0.68 [0.50-0.81]
+ 2020         50                  34 0.95 [0.77-0.99] 0.59 [0.42-0.74]
+ 2021         50                  35 1.00 [0.84-1.00] 0.57 [0.41-0.72]
+ 2022         50                  37 0.96 [0.79-0.99] 0.59 [0.43-0.74]
+
+2. TITLE DAMAGE BY YEAR (212 outlets)
+      titles  has_punctuation  glued_apos  html_entity  max_len  share_99_plus_chars  outlets  outlets_punct_under_30pct
+year                                                                                                                    
+2017   97831            0.677      0.0000       0.0069      233                0.055       68                        0.0
+2018  389121            0.000      0.0315       0.0000      100                0.024      121                      121.0
+2019  474972            0.686      0.0000       0.0534      235                0.119      161                        2.0
+2020  845611            0.683      0.0000       0.0282      322                0.132      201                        4.0
+2021  881660            0.669      0.0000       0.0007      612                0.110      198                        2.0
+2022  837625            0.670      0.0000       0.0011      452                0.098      193                        1.0
+
+3. POLITICAL ARTICLES BY YEAR (212 outlets)
+           n  pol_v1  pol_v2  pol_v21  v21_gain_over_v2_pct
+year                                                       
+2017   97831   53389   61472    61534                  0.10
+2018  389121  136905  170447   178076                  4.48
+2019  474972  176206  217724   217852                  0.06
+2020  845611  290868  357108   357281                  0.05
+2021  881660  275782  341699   341906                  0.06
+2022  837625  268647  326391   326582                  0.06
+eligible: v1 212 (same as Eligible sheet: True) | v2 219 | v2.1 219
+
+OUTLETS NEWLY ELIGIBLE UNDER v2.1: 7
+                                               n  pol_v21  share_v21           bias      factuality                     type
+source                                                                                                                      
+thedailyrecord                             34061     4596      0.135           Left  Mostly Factual                Newspaper
+inews                                       1680      389      0.232    Left-Center            High                Newspaper
+petapeoplefortheethicaltreatmentofanimals   2972      301      0.101           Left           Mixed  Organization/Foundation
+theeuropeanuniontimes                        664      261      0.393          Right             Low                  Website
+prntly                                       484      254      0.525  Extreme Right             Low                  Website
+beholdisrael                                 816      252      0.309          Right           Mixed                  Website
+wakingtimes                                 1834      221      0.121           Left             Low                  Website
+OUTLETS LOSING ELIGIBILITY UNDER v2.1: 0 (expected 0)
+
+4. ARTICLE TEXT BY YEAR (212 outlets)
+ year  articles  mean_chars  has_period  has_comma  has_exclamation  has_apostrophe  has_double_quote  periods_per_1000_chars
+ 2017     97831      3348.0       0.990      0.986            0.120           0.946             0.866                   7.160
+ 2018    389121      3162.0       0.987      0.986            0.101           0.341             0.286                   7.011
+ 2019    474972      3676.0       0.995      0.990            0.126           0.956             0.879                   7.199
+ 2020    845611      3849.0       0.994      0.987            0.120           0.946             0.876                   7.191
+ 2021    881660      3729.0       0.992      0.981            0.110           0.934             0.870                   7.239
+ 2022    837625      3854.0       0.994      0.986            0.113           0.944             0.885                   7.270
+
+5. PARQUET COLUMNS: ['author', 'title', 'content', 'source', 'domain', 'raw_url', 'publication_date', 'article_id']
+  2018 parquet titles with punctuation: 0.000
+  metadata: 'Kevin De Bruyne will be back for Manchester City faster than expected says Belgium coach Roberto Ma'
+  parquet:  'Kevin De Bruyne will be back for Manchester City faster than expected says Belgium coach Roberto Ma'
+  metadata: 'How Trumps economic guru Gary Cohn quietly became the presidents biggest enemy in the White House'
+  parquet:  'How Trumps economic guru Gary Cohn quietly became the presidents biggest enemy in the White House'
+  metadata: 'Gary Cohn Is Joining Blockchain Startup Spring Labs'
+  parquet:  'Gary Cohn Is Joining Blockchain Startup Spring Labs'
+  metadata: 'CDC warns rare polio-like spinal disease spreading across 22 US states'
+  parquet:  'CDC warns rare polio-like spinal disease spreading across 22 US states'
+  metadata: 'Actress Selma Blair diagnosed with multiple sclerosis'
+  parquet:  'Actress Selma Blair diagnosed with multiple sclerosis'
+  metadata: 'Fox News gives soft treatment to EPA chief Andrew Wheeler as he defends admins new coal-friendly pl'
+  parquet:  'Fox News gives soft treatment to EPA chief Andrew Wheeler as he defends admins new coal-friendly pl'

@@ -1,0 +1,374 @@
+FUNNEL SHEET
+                       stage    n
+0                All sources  488
+1                   Has bias  383
+2             Has factuality  374
+3     Not satire/pro-science  374
+4  Political articles >= 200  221
+5     Political share >= 10%  212
+
+CUT REASONS (All_With_Reasons)
+cut_reason
+KEEP                                212
+no bias rating                      105
+too few political articles (0)       25
+no factuality rating                  9
+too few political articles (2)        7
+too few political articles (7)        6
+too few political articles (1)        4
+too few political articles (168)      3
+too few political articles (9)        3
+too few political articles (57)       3
+too few political articles (98)       3
+too few political articles (5)        3
+too few political articles (16)       3
+too few political articles (38)       3
+too few political articles (22)       3
+too few political articles (23)       3
+too few political articles (4)        3
+political share too low (7%)          2
+political share too low (6%)          2
+political share too low (4%)          2
+too few political articles (163)      2
+too few political articles (20)       2
+too few political articles (49)       2
+too few political articles (29)       2
+too few political articles (78)       2
+too few political articles (73)       2
+too few political articles (18)       2
+too few political articles (60)       2
+too few political articles (13)       2
+too few political articles (91)       2
+too few political articles (8)        2
+too few political articles (10)       2
+too few political articles (14)       2
+too few political articles (11)       2
+too few political articles (25)       2
+too few political articles (12)       2
+too few political articles (3)        2
+political share too low (3%)          1
+political share too low (9%)          1
+political share too low (8%)          1
+too few political articles (188)      1
+too few political articles (136)      1
+too few political articles (76)       1
+too few political articles (137)      1
+too few political articles (84)       1
+too few political articles (196)      1
+too few political articles (109)      1
+too few political articles (43)       1
+too few political articles (145)      1
+too few political articles (197)      1
+too few political articles (144)      1
+too few political articles (142)      1
+too few political articles (66)       1
+too few political articles (26)       1
+too few political articles (116)      1
+too few political articles (110)      1
+too few political articles (46)       1
+too few political articles (111)      1
+too few political articles (170)      1
+too few political articles (101)      1
+too few political articles (67)       1
+too few political articles (130)      1
+too few political articles (80)       1
+too few political articles (85)       1
+too few political articles (40)       1
+too few political articles (90)       1
+too few political articles (61)       1
+too few political articles (56)       1
+too few political articles (77)       1
+too few political articles (37)       1
+too few political articles (55)       1
+too few political articles (102)      1
+too few political articles (74)       1
+too few political articles (50)       1
+too few political articles (52)       1
+too few political articles (47)       1
+too few political articles (24)       1
+too few political articles (58)       1
+too few political articles (21)       1
+too few political articles (39)       1
+too few political articles (63)       1
+too few political articles (33)       1
+too few political articles (34)       1
+too few political articles (19)       1
+too few political articles (27)       1
+too few political articles (15)       1
+too few political articles (6)        1
+
+ELIGIBLE ROWS WHOSE match_notes MENTION A CUT
+  none
+
+OTHER OUTLET LISTS vs Eligible (212)
+  Thesis Sample.xlsx [Eligible]: 212 sources | only in Eligible (0): [] | only here (0): []
+  Thesis Sample.xlsx [All_With_Reasons]: 488 sources | only in Eligible (0): [] | only here (276): ...
+  Thesis Sample.xlsx [Share_Calibration]: 221 sources | only in Eligible (0): [] | only here (9): ['birminghammail', 'metrouk', 'petapeoplefortheethicaltreatmentofanimals', 'thedailyecho', 'thedailymirror', 'thedailyrecord', 'themanchestereveningnews', 'thesun', 'theverge']
+  Thesis Sample.xlsx [Funnel]: (6, 2), columns ['stage', 'n']
+  final_sample+NELdata.xlsx [Eligible]: 149 sources | only in Eligible (63): ... | only here (0): []
+  final_sample+NELdata.xlsx [All_With_Reasons]: 488 sources | only in Eligible (0): [] | only here (276): ...
+  final_sample+NELdata.xlsx [Funnel]: (6, 2), columns ['stage', 'n']
+  source_manifest.csv: 488 sources | only in Eligible (0): [] | only here (276): ...
+  source_manifest_eligible.csv: 326 sources | only in Eligible (0): [] | only here (114): ...
+
+political_pattern.txt: 1,436 chars, ~139 alternatives
+  start: '\\b(?:house\\ of\\ representatives|presidential\\ primary|coalition\\ government|european\\ commission|european\\ parliament|se'
+
+===== build_final_sample.py =====
+import re
+import duckdb
+import pandas as pd
+
+MIN_POLITICAL_ARTICLES = 200
+MIN_POLITICAL_SHARE = 0.10
+
+POLITICAL_KEYWORDS = {
+    "white house", "congress", "senate", "house of representatives",
+    "supreme court", "pentagon", "cia", "fbi", "doj", "department of",
+    "parliament", "kremlin", "united nations", "u.n.", "nato",
+    "european union", "european commission", "european parliament",
+    "downing street", "westminster", "house of commons", "house of lords",
+    "bundestag", "state department", "foreign ministry", "security council",
+    "imf", "world bank", "opec", "g7", "g20",
+    "president", "vice president", "senator", "congressman", "congresswoman",
+    "governor", "mayor", "secretary of state", "attorney general",
+    "democrat", "republican", "gop", "liberal", "conservative",
+    "labour", "tory", "tories", "lawmaker", "politician", "administration",
+    "trump", "biden", "harris", "obama", "pelosi", "mcconnell",
+    "prime minister", "chancellor", "minister", "diplomat", "ambassador",
+    "putin", "zelensky", "xi jinping", "modi", "netanyahu", "erdogan",
+    "macron", "scholz", "merkel", "starmer", "sunak", "trudeau", "albanese",
+    "election", "vote", "voting", "ballot", "midterm",
+    "primary election", "presidential primary",
+    "referendum", "general election", "by-election", "no confidence",
+    "legislation", "bill", "law", "regulation", "executive order",
+    "impeach", "filibuster", "veto", "amendment", "constitution",
+    "cabinet", "reshuffle", "coalition government", "brexit",
+    "immigration", "border", "tariff", "sanctions", "foreign policy",
+    "climate", "healthcare", "abortion", "gun control", "gun laws",
+    "gun violence", "tax", "budget", "deficit", "inflation",
+    "federal reserve", "spending", "debt ceiling",
+    "military", "war", "ceasefire", "treaty", "diplomacy", "airstrike",
+    "nuclear deal", "summit", "annex", "occupation",
+    "scandal", "investigation", "indictment", "probe", "hearing",
+    "testimony", "protest", "riot", "coup", "geopolitical", "political",
+}
+
+pattern = r"\b(?:" + "|".join(
+    re.escape(k) for k in sorted(POLITICAL_KEYWORDS, key=len, reverse=True)
+) + r")\b"
+
+with open("political_pattern.txt", "w") as f:
+    f.write(pattern)
+
+db = duckdb.connect("data/misinfo-general/metadata.db", read_only=True)
+
+print("=== TYPE DISTRIBUTION ===")
+print(db.sql("SELECT type, COUNT(*) n FROM sources GROUP BY type ORDER BY n DESC"))
+
+print("\nScanning titles - takes a minute...")
+stats = db.execute("""
+    SELECT
+      source,
+      COUNT(*) AS n_articles,
+      COUNT(*) FILTER (WHERE regexp_matches(lower(title), ?)) AS n_political
+    FROM articles
+    GROUP BY source
+""", [pattern]).df()
+
+stats["political_share"] = stats.n_political / stats.n_articles
+
+print("Pulling domains from parquet...")
+try:
+    dom = db.execute("""
+        SELECT source, MODE(domain) AS domain
+        FROM read_parquet('data/misinfo-general/data/*.parquet')
+        WHERE domain IS NOT NULL AND domain != 'N/A'
+        GROUP BY source
+    """).df()
+    stats = stats.merge(dom, on="source", how="left")
+except Exception as e:
+    print(f"domain lookup failed ({e}) - continuing without it")
+    stats["domain"] = ""
+
+src = db.sql("SELECT * FROM sources").df()
+df = src.merge(stats, on="source", how="left")
+df[["n_articles", "n_political", "political_share"]] = \
+    df[["n_articles", "n_political", "political_share"]].fillna(0)
+if "domain" not in df.columns:
+    df["domain"] = ""
+df["domain"] = df["domain"].fillna("")
+
+def reason(r):
+    if pd.isna(r.bias):       return "no bias rating"
+    if pd.isna(r.factuality): return "no factuality rating"
+    if r.label in ("Satire", "Pro-Science"):
+        return f"source type: {r.label}"
+    if r.n_political < MIN_POLITICAL_ARTICLES:
+        return f"too few political articles ({int(r.n_political)})"
+    if r.political_share < MIN_POLITICAL_SHARE:
+        return f"political share too low ({r.political_share:.0%})"
+    return "KEEP"
+
+df["cut_reason"] = df.apply(reason, axis=1)
+eligible = df[df.cut_reason == "KEEP"].sort_values("n_political", ascending=False)
+
+base = df.bias.notna() & df.factuality.notna()
+notype = base & ~df.label.isin(["Satire", "Pro-Science"])
+enough = notype & (df.n_political >= MIN_POLITICAL_ARTICLES)
+funnel = pd.DataFrame({
+    "stage": ["All sources", "Has bias", "Has factuality",
+              "Not satire/pro-science",
+              f"Political articles >= {MIN_POLITICAL_ARTICLES}",
+              f"Political share >= {MIN_POLITICAL_SHARE:.0%}"],
+    "n": [len(df), df.bias.notna().sum(), base.sum(), notype.sum(),
+          enough.sum(), len(eligible)],
+})
+
+cols = ["source", "domain", "n_articles", "n_political", "political_share",
+        "label", "bias", "factuality", "credibility", "type", "country",
+        "conspiracy", "pseudosci", "check_date"]
+out = eligible[cols].copy()
+out["adfontes_bias"] = ""
+out["adfontes_reliability"] = ""
+out["match_notes"] = ""
+
+borderline = df[notype & (df.n_political >= MIN_POLITICAL_ARTICLES)] \
+    .sort_values("political_share")[cols + ["cut_reason"]]
+
+with pd.ExcelWriter("final_sample.xlsx", engine="openpyxl") as w:
+    out.to_excel(w, sheet_name="Eligible", index=False)
+    df[cols + ["cut_reason"]].sort_values("n_articles", ascending=False) \
+      .to_excel(w, sheet_name="All_With_Reasons", index=False)
+    borderline.to_excel(w, sheet_name="Share_Calibration", index=False)
+    funnel.to_excel(w, sheet_name="Funnel", index=False)
+
+print(funnel.to_string(index=False))
+print(f"\nFINAL N: {len(eligible)}")
+print(eligible.bias.value_counts())
+print(eligible.label.value_counts())
+
+
+LEXICON FILES (20 total, 0 in language/translation folders)
+  MWE/mwe-NRC-VAD-Lexicon-v2.1.txt (312,990 bytes)
+  MWE/mwe-arousal-NRC-VAD-Lexicon-v2.1.txt (182,704 bytes)
+  MWE/mwe-dominance-NRC-VAD-Lexicon-v2.1.txt (182,428 bytes)
+  MWE/mwe-valence-NRC-VAD-Lexicon-v2.1.txt (182,302 bytes)
+  NRC-VAD-Lexicon-v2.1.txt (1,612,583 bytes)
+  OneFilePerDimension/PolarSubset/arousal-polar-NRC-VAD-Lexicon-v2.1.txt (454,324 bytes)
+  OneFilePerDimension/PolarSubset/dominance-polar-NRC-VAD-Lexicon-v2.1.txt (427,374 bytes)
+  OneFilePerDimension/PolarSubset/valence-polar-NRC-VAD-Lexicon-v2.1.txt (489,346 bytes)
+  OneFilePerDimension/arousal-NRC-VAD-Lexicon-v2.1.txt (907,434 bytes)
+  OneFilePerDimension/dominance-NRC-VAD-Lexicon-v2.1.txt (905,230 bytes)
+  OneFilePerDimension/valence-NRC-VAD-Lexicon-v2.1.txt (904,749 bytes)
+  Paper-Ethics-Sheet-Emotion-Recognition.pdf (319,007 bytes)
+  Paper-Practical-Ethical-Considerations-Lexicons.pdf (123,332 bytes)
+  Paper-VAD-ACL2018.pdf (174,156 bytes)
+  Paper-VAD-v2-2025.pdf (2,820,467 bytes)
+  README.txt (26,089 bytes)
+  Unigrams/unigrams-NRC-VAD-Lexicon-v2.1.txt (1,299,624 bytes)
+  Unigrams/unigrams-arousal-NRC-VAD-Lexicon-v2.1.txt (724,743 bytes)
+  Unigrams/unigrams-dominance-NRC-VAD-Lexicon-v2.1.txt (722,817 bytes)
+  Unigrams/unigrams-valence-NRC-VAD-Lexicon-v2.1.txt (722,460 bytes)
+
+== MWE/mwe-NRC-VAD-Lexicon-v2.1.txt
+  term	valence	arousal	dominance
+  a battery	0.134	-0.298	-0.096
+  a bit	-0.096	-0.264	-0.214
+  a bunch	0.088	-0.350	-0.068
+  lines 10,074 | multi-word terms 10,073
+  function words present: []
+         valence    arousal  dominance
+count  10073.000  10073.000  10073.000
+mean       0.003      0.001      0.006
+std        0.354      0.202      0.269
+min       -1.000     -1.000     -1.000
+25%       -0.234     -0.136     -0.172
+50%        0.032      0.000      0.000
+75%        0.250      0.130      0.192
+max        1.000      0.988      1.000
+
+== MWE/mwe-arousal-NRC-VAD-Lexicon-v2.1.txt
+  term	arousal
+  phone sex	0.988
+  nervous wreck	0.984
+  give birth	0.982
+  lines 10,074 | multi-word terms 10,073
+  function words present: []
+         arousal
+count  10073.000
+mean       0.001
+std        0.202
+min       -1.000
+25%       -0.136
+50%        0.000
+75%        0.130
+max        0.988
+
+== MWE/mwe-dominance-NRC-VAD-Lexicon-v2.1.txt
+  term	dominance
+  high performance	1.000
+  gold medalist	1.000
+  win win	1.000
+  lines 10,074 | multi-word terms 10,073
+  function words present: []
+       dominance
+count  10073.000
+mean       0.006
+std        0.269
+min       -1.000
+25%       -0.172
+50%        0.000
+75%        0.192
+max        1.000
+
+== MWE/mwe-valence-NRC-VAD-Lexicon-v2.1.txt
+  term	valence
+  very positive	1.000
+  very well	1.000
+  great opportunity	1.000
+  lines 10,074 | multi-word terms 10,073
+  function words present: []
+         valence
+count  10073.000
+mean       0.003
+std        0.354
+min       -1.000
+25%       -0.234
+50%        0.032
+75%        0.250
+max        1.000
+
+== NRC-VAD-Lexicon-v2.1.txt
+  term	valence	arousal	dominance
+  a battery	0.134	-0.298	-0.096
+  a bit	-0.096	-0.264	-0.214
+  a bunch	0.088	-0.350	-0.068
+  lines 54,802 | multi-word terms 10,073
+  function words present: ['and', 'of', 'to', 'is', 'that', 'it']
+         valence    arousal  dominance
+count  54801.000  54801.000  54801.000
+mean      -0.001      0.018      0.045
+std        0.477      0.464      0.414
+min       -1.000     -1.000     -1.000
+25%       -0.334     -0.292     -0.250
+50%        0.000      0.000      0.016
+75%        0.333      0.362      0.344
+max        1.000      1.000      1.000
+
+== OneFilePerDimension/PolarSubset/arousal-polar-NRC-VAD-Lexicon-v2.1.txt
+  term	arousal
+  lanced	1.000
+  overenthusiastic	1.000
+  downdraft	1.000
+  lines 27,165 | multi-word terms 927
+  function words present: []
+         arousal
+count  27164.000
+mean       0.057
+std        0.636
+min       -1.000
+25%       -0.583
+50%        0.370
+75%        0.667
+max        1.000

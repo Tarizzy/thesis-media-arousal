@@ -1,0 +1,8 @@
+coders,n_coders,kappa,rho_lexicon,p,reliability_of_mean,ceiling,primary
+coder2,1,,-0.0317,0.7307,,,False
+taner,1,,-0.1044,0.2563,,,False
+tarik,1,,0.1092,0.2351,,,False
+coder2+taner,2,0.5267,-0.0722,0.4335,0.7003,0.8368,False
+coder2+tarik,2,0.4164,0.0569,0.5374,0.5951,0.7714,False
+taner+tarik,2,0.4428,-0.0034,0.9706,0.6184,0.7864,False
+coder2+taner+tarik,3,0.4620,-0.0048,0.9583,0.7268,0.8525,True

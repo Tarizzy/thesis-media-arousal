@@ -1,0 +1,299 @@
+house of representatives	v1
+coalition government	v1
+presidential primary	v1
+european commission	v1
+european parliament	v1
+secretary of state	v1
+attorney general	v1
+dominic cummings	added in v2
+elizabeth warren	added in v2
+executive orders	added in v2
+foreign ministry	v1
+general election	v1
+house of commons	v1
+primary election	v1
+security council	v1
+state department	v1
+executive order	v1
+federal reserve	v1
+administration	v1
+bernie sanders	added in v2
+capitol attack	added in v2
+constitutional	added in v2
+downing street	v1
+european union	v1
+foreign policy	v1
+house of lords	v1
+investigations	added in v2
+kevin mccarthy	added in v2
+lindsey graham	added in v2
+prime minister	v1
+scott morrison	added in v2
+united nations	v1
+vice president	v1
+boris johnson	added in v2
+capitol siege	added in v2
+congressional	added in v2
+congresswoman	v1
+congresswomen	added in v2
+conservatives	added in v2
+department of	v1
+investigation	v1
+no confidence	v1
+ocasio-cortez	added in v2
+parliamentary	added in v2
+supreme court	v1
+capitol hill	added in v2
+capitol riot	added in v2
+conservative	v1
+constitution	v1
+debt ceiling	v1
+geopolitical	v1
+gun violence	v1
+insurrection	added in v2
+nuclear deal	v1
+presidential	added in v2
+ambassadors	added in v2
+by-election	v1
+congressman	v1
+congressmen	added in v2
+governments	added in v2
+gun control	v1
+immigration	v1
+impeachment	added in v2
+indictments	added in v2
+january 6th	added in v2
+kim jong un	added in v2
+kim jong-un	added in v2
+legislation	v1
+legislative	added in v2
+legislature	added in v2
+parliaments	added in v2
+politicians	added in v2
+priti patel	added in v2
+referendums	added in v2
+regulations	added in v2
+republicans	added in v2
+roe v. wade	added in v2
+theresa may	added in v2
+westminster	v1
+white house	v1
+airstrikes	added in v2
+ambassador	v1
+amendments	added in v2
+annexation	added in v2
+chancellor	v1
+democratic	added in v2
+diplomatic	added in v2
+filibuster	v1
+government	added in v2
+healthcare	v1
+immigrants	added in v2
+indictment	v1
+lukashenko	added in v2
+occupation	v1
+parliament	v1
+politician	v1
+presidency	added in v2
+presidents	added in v2
+protesters	added in v2
+protestors	added in v2
+referendum	v1
+regulation	v1
+republican	v1
+roe v wade	added in v2
+sanctioned	added in v2
+shinzo abe	added in v2
+world bank	v1
+xi jinping	v1
+abortions	added in v2
+airstrike	v1
+amendment	v1
+bolsonaro	added in v2
+bundestag	v1
+buttigieg	added in v2
+ceasefire	v1
+democracy	added in v2
+democrats	added in v2
+diplomacy	v1
+diplomats	added in v2
+elections	added in v2
+electoral	added in v2
+governors	added in v2
+immigrant	added in v2
+impeached	added in v2
+inflation	v1
+january 6	added in v2
+kavanaugh	added in v2
+lawmakers	added in v2
+mcconnell	v1
+ministers	added in v2
+netanyahu	v1
+political	v1
+president	v1
+reshuffle	v1
+sanctions	v1
+testimony	v1
+tillerson	added in v2
+whitehall	added in v2
+zelenskiy	added in v2
+zelenskyy	added in v2
+abortion	v1
+albanese	v1
+congress	v1
+deficits	added in v2
+democrat	v1
+desantis	added in v2
+diplomat	v1
+election	v1
+giuliani	added in v2
+governor	v1
+gun laws	v1
+hearings	added in v2
+holyrood	added in v2
+indicted	added in v2
+khamenei	added in v2
+lawmaker	v1
+lib dems	added in v2
+liberals	added in v2
+manafort	added in v2
+midterms	added in v2
+migrants	added in v2
+military	v1
+minister	v1
+pentagon	v1
+politics	added in v2
+protests	added in v2
+refugees	added in v2
+sanction	added in v2
+scandals	added in v2
+senators	added in v2
+spending	v1
+stormont	added in v2
+sturgeon	added in v2
+ted cruz	added in v2
+treaties	added in v2
+zelensky	v1
+annexed	added in v2
+ballots	added in v2
+borders	added in v2
+budgets	added in v2
+cabinet	v1
+climate	v1
+clinton	added in v2
+deficit	v1
+duterte	added in v2
+erdogan	v1
+hearing	v1
+hillary	added in v2
+impeach	v1
+kremlin	v1
+kushner	added in v2
+lib dem	added in v2
+liberal	v1
+midterm	v1
+migrant	added in v2
+mueller	added in v2
+navalny	added in v2
+protest	v1
+refugee	added in v2
+rioters	added in v2
+rouhani	added in v2
+scandal	v1
+schumer	added in v2
+senator	v1
+starmer	v1
+taliban	added in v2
+tariffs	added in v2
+trudeau	v1
+ardern	added in v2
+asylum	added in v2
+ballot	v1
+border	v1
+brexit	v1
+budget	v1
+cheney	added in v2
+corbyn	added in v2
+farage	added in v2
+harris	v1
+jan. 6	added in v2
+kamala	added in v2
+labour	v1
+macron	v1
+maduro	added in v2
+mayors	added in v2
+merkel	v1
+newsom	added in v2
+pelosi	v1
+pompeo	added in v2
+probes	added in v2
+romney	added in v2
+scholz	v1
+scotus	added in v2
+senate	v1
+summit	v1
+tariff	v1
+tories	v1
+treaty	v1
+vetoed	added in v2
+vetoes	added in v2
+voters	added in v2
+voting	v1
+annex	v1
+assad	added in v2
+biden	v1
+boris	added in v2
+comey	added in v2
+cuomo	added in v2
+hamas	added in v2
+jan 6	added in v2
+javid	added in v2
+mayor	v1
+obama	v1
+orban	added in v2
+orbán	added in v2
+pence	added in v2
+potus	added in v2
+probe	v1
+putin	v1
+riots	added in v2
+sunak	v1
+taxes	added in v2
+trump	v1
+truss	added in v2
+voted	added in v2
+voter	added in v2
+votes	added in v2
+bill	v1
+coup	v1
+gov.	added in v2
+gove	added in v2
+laws	added in v2
+meps	added in v2
+modi	v1
+nato	v1
+opec	v1
+raab	added in v2
+riot	v1
+sen.	added in v2
+tory	v1
+u.n.	v1
+ukip	added in v2
+veto	v1
+vote	v1
+cia	v1
+dnc	added in v2
+doj	v1
+fbi	v1
+g20	v1
+gop	v1
+imf	v1
+law	v1
+mep	added in v2
+mps	added in v2
+rnc	added in v2
+snp	added in v2
+tax	v1
+war	v1
+g7	v1
+mp	added in v2

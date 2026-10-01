@@ -1,0 +1,85 @@
+SUPERSEDED IN PART, 25 Sep 2026: the feature descriptives and the Ad Fontes coverage listing
+counted the five merged class names against the raw MBFC labels, so the two Very High outlets
+fell out of the High column. Use pipeline/00g_checks.txt for both. The year distribution, the
+Very High count, the Flesch-Kincaid check and the Extreme-outlet check below are unaffected.
+
+00f_checks - 57,210 articles, 211 outlets
+
+==========================================================================================
+1  EXTREME OUTLETS (42 or 47?)
+   outlets with an Extreme bias label: 47
+   x      mbfc_factuality
+   False  High               61
+          Low                17
+          Mixed              55
+          Mostly Factual     24
+          Very High           2
+          Very Low            5
+   True   Low                31
+          Mixed               5
+          Very Low           11
+   Extreme outlets NOT rated Low or Very Low: 5 ['addictinginfo', 'breitbart', 'justthenews', 'westernjournal', 'youngconservatives']
+   -> the 'all Extreme are Low/Very Low' claim is FALSE as written
+
+==========================================================================================
+2  LEAST BIASED OUTLETS
+   11 outlets; factuality: {'High': np.int64(7), 'Very High': np.int64(2), 'Mostly Factual': np.int64(2)}
+
+==========================================================================================
+3  AD FONTES COVERAGE (80, 81 or 82?)
+   outlets in the analysis table with an Ad Fontes lean: 81 of 211
+   articles from those outlets: 22,832
+   Spearman of MBFC bias with Ad Fontes lean: 0.900 (p 2.9e-30), n = 81
+   coverage by factuality class (with score / total):
+      Very Low          2 of  16
+      Low               8 of  48
+      Mixed            26 of  60
+      Mostly Factual   16 of  24
+      High             28 of  61
+   The Independent's stored lean: {'theindependent': np.float64(-6.91)} (was mistyped 6,-91 = -6.91)
+
+==========================================================================================
+4  WHY 'VERY HIGH' WAS COLLAPSED INTO 'HIGH'
+   original MBFC labels for the 211 outlets, as shipped in metadata.db:
+       factuality  n
+             High 61
+            Mixed 60
+              Low 48
+   Mostly Factual 24
+         Very Low 16
+        Very High  2
+   -> 2 outlets are rated Very High; too few to estimate a separate class, which is why Very High is collapsed into High.
+
+==========================================================================================
+5  IS FLESCH-KINCAID WINSORISED IN THE ANALYSIS TABLE?
+   min 1.09, 1st pct 6.68, 99th pct 18.61, max 132.25
+   articles at exactly the min: 1; at exactly the max: 1
+   -> NOT winsorised in the table; each script winsorises its own copy (08a logs the bounds it used)
+
+==========================================================================================
+6  FEATURE DESCRIPTIVES BY FACTUALITY CLASS (for the Data chapter table)
+fact                 Very Low      Low    Mixed  Mostly Factual     High  overall mean  overall SD
+arousal                -0.008   -0.013   -0.015          -0.016   -0.019        -0.015       0.056
+valence                 0.113    0.118    0.124           0.129    0.132         0.125       0.074
+dominance               0.137    0.143    0.145           0.149    0.151         0.146       0.059
+attribution_density     0.009    0.008    0.010           0.011    0.010         0.010       0.008
+hedging                 0.003    0.003    0.003           0.003    0.003         0.003       0.003
+certainty               0.001    0.001    0.001           0.000    0.000         0.001       0.001
+caps_ratio              0.001    0.001    0.001           0.000    0.000         0.001       0.005
+exclamation_rate        0.021    0.018    0.008           0.007    0.004         0.010       0.035
+flesch_kincaid         12.124   11.931   11.983          12.220   12.152        12.062       2.585
+mtld                  110.404  113.450  113.011         115.906  117.226       114.515      27.346
+log_length              6.056    6.231    6.161           6.322    6.423         6.259       0.605
+
+   (saved to pipeline/00f_descriptives.csv; outlet counts per class are in 08a_report.txt)
+
+==========================================================================================
+7  ARTICLES PUBLISHED IN 2018 (for the without-2018 specification)
+   year
+   2017     3580
+   2018     5939
+   2019     7471
+   2020    14027
+   2021    13145
+   2022    13048
+   dropping 2018 would leave 51,271 articles

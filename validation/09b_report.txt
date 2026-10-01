@@ -1,0 +1,26 @@
+coder2: 120 of 120 items rated | 0: 24, 1: 53, 2: 43 | mean 1.16
+taner: 120 of 120 items rated | 0: 31, 1: 52, 2: 37 | mean 1.05
+tarik: 120 of 120 items rated | 0: 27, 1: 50, 2: 43 | mean 1.13
+
+AGREEMENT BETWEEN CODERS on 120 items shared by coder2 and taner
+   exact agreement 55% | within one point 98%
+   quadratic-weighted kappa 0.527
+   means 1.16 vs 1.05
+
+AGREEMENT WITH THE WORD-LIST MEASURE (120 items)
+   Spearman of the human rating with lexicon arousal: -0.005 (p 0.9583)
+   human 0 ( 24 items): mean lexicon arousal -0.0218
+   human 1 ( 60 items): mean lexicon arousal -0.0124
+   human 2 ( 36 items): mean lexicon arousal -0.0235
+   by factuality class (human mean / lexicon mean):
+      High            0.83 / -0.0178  (22 items)
+      Low             1.23 / -0.0209  (27 items)
+      Mixed           1.21 / -0.0227  (25 items)
+      Mostly Factual  0.99 / -0.0093  (23 items)
+      Very High       1.33 / +0.0094  (1 items)
+      Very Low        1.26 / -0.0175  (22 items)
+   within arousal strata: 1: -0.13, 2: -0.10, 3: -0.34, 4: -0.03, 5: +0.24
+   drift check, mean rating by block of 20 items in the order they were rated: 1.10, 1.03, 1.02, 1.27, 1.10, 1.17
+
+TOPIC CONTESTEDNESS: human ratings vs framing divergence over 33 topics: Spearman 0.092 (p 0.6096)
+   0:1, 1:0, 2:0, 3:2, 4:0, 5:1, 6:2, 7:0, 8:1, 9:0, 10:0, 11:1, 12:0, 13:0, 14:0, 15:1, 16:1, 17:1, 18:1, 19:1, 20:1, 21:2, 22:1, 23:0, 24:1, 25:2, 26:1, 27:2, 28:1, 29:2, 30:2, 31:2, 32:0

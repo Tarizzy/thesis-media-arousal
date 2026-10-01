@@ -1,0 +1,54 @@
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/lexical_diversity/lex_div.py:4: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+VERSIONS {'textstat': '0.7.13', 'lexical-diversity': '0.1.1', 'nltk': '3.9.4', 'duckdb': '1.5.5', 'pandas': '3.0.5', 'numpy': '2.4.4'}
+
+LEXICON: 44,728 unigrams | excluded from VAD means: 266 words
+
+FEATURES (synthetic article)
+  n_tokens: got 25, expected 25 -> PASS
+  n_masked: got 3, expected 3 -> PASS
+  n_sentences: got 3, expected 3 -> PASS
+  attribution_density: got 0.12, expected 0.12 -> PASS
+  quote_pairs: got 1.0, expected 1.0 -> PASS
+  hedging: got 0.04, expected 0.04 -> PASS
+  certainty: got 0.08, expected 0.08 -> PASS
+  caps_ratio: got 0.04, expected 0.04 -> PASS
+  exclamation_rate: got 0.3333333333333333, expected 0.3333333333333333 -> PASS
+
+NAMES ARE SKIPPED BY THE LEXICON
+  names flagged: got ['Trump', 'House', 'Trump'], expected ['Trump', 'House', 'Trump'] -> PASS
+  capitals of a name flagged: got ['Trump', 'TRUMP'], expected ['Trump', 'TRUMP'] -> PASS
+  caps_ratio counts DEAD only: got 0.1, expected 0.1 -> PASS
+  'says' excluded from VAD means: got True, expected True -> PASS
+  'told' excluded from VAD means: got True, expected True -> PASS
+  'could' excluded from VAD means: got True, expected True -> PASS
+  'may' excluded from VAD means: got True, expected True -> PASS
+  'would' excluded from VAD means: got True, expected True -> PASS
+  'going' excluded from VAD means: got True, expected True -> PASS
+  'one' excluded from VAD means: got True, expected True -> PASS
+
+LINE BREAKS END SENTENCES
+  cleaned: got 'First line without period. Second line. Third.', expected 'First line without period. Second line. Third.' -> PASS
+
+HTML CODES IN ARTICLE TEXT (Fusion)
+  cleaned: got "He said “no” and it's & fine!", expected "He said “no” and it's & fine!" -> PASS
+  n_tokens: got 6, expected 6 -> PASS
+  quote_pairs: got 1.0, expected 1.0 -> PASS
+  attribution_density: got 0.16666666666666666, expected 0.16666666666666666 -> PASS
+
+HEADLINE REPAIR + KEYWORD LIST v2.1
+  The 45 most bizarre lines from Donald Trumps : got True, expected True -> PASS
+  quotThis is a DISASTERquot says Trumpaposs ai: got True, expected True -> PASS
+  Jeremy Corbyn aposNo Iaposm not an anti-Semit: got True, expected True -> PASS
+  Apostle Paul and the quota system, Veuve Clic: got False, expected False -> PASS
+  Another nationwide mushroom recall after stat: got False, expected False -> PASS
+
+FILTER REPRODUCES 02c (political articles per year, 212 outlets; takes a few minutes)
+  2017: got 61534, expected 61534 -> PASS
+  2018: got 178076, expected 178076 -> PASS
+  2019: got 217852, expected 217852 -> PASS
+  2020: got 357281, expected 357281 -> PASS
+  2021: got 341906, expected 341906 -> PASS
+  2022: got 326582, expected 326582 -> PASS
+
+ALL CHECKS PASS

@@ -1,0 +1,313 @@
+08c_diagnostics - 2026-09-21 13:52 - 57,210 articles, 211 outlets
+5-fold x 5 repeats | 2,000 outlet-bootstrap draws | fixed parameters: forest {'min_samples_leaf': 20}, boosting {'learning_rate': 0.05, 'max_leaf_nodes': 15}
+
+====================================================================================================
+A  FEATURE CEILINGS
+ICC = share of a feature's variance that sits between outlets (the most an outlet-level signal can use);
+eta2 = share explained by the five factuality classes; rho = Spearman of outlet means with factuality
+                         group  ICC outlet  ICC outlet, topic+year removed  eta2 factuality (articles)  rho outlet mean vs factuality
+feature                                                                                                                              
+arousal                emotion      +0.073                          +0.049                      +0.003                         -0.183
+valence                emotion      +0.067                          +0.054                      +0.007                         +0.361
+dominance              emotion      +0.086                          +0.068                      +0.005                         +0.240
+attribution_density  epistemic      +0.247                          +0.238                      +0.019                         +0.216
+hedging              epistemic      +0.049                          +0.044                      +0.001                         +0.070
+certainty            epistemic      +0.029                          +0.023                      +0.004                         -0.358
+caps_ratio               style      +0.078                          +0.075                      +0.006                         -0.502
+exclamation_rate         style      +0.101                          +0.092                      +0.027                         -0.618
+flesch_kincaid           style      +0.151                          +0.125                      +0.002                         +0.071
+mtld                     style      +0.099                          +0.098                      +0.006                         +0.260
+log_length               style      +0.345                          +0.328                      +0.034                         +0.268
+
+====================================================================================================
+B  LEAKAGE: naive k-fold and out-of-bag vs outlet-grouped (all 11 text features)
+   rep 0 ordinal logit  naive    article QWK 0.245  outlet QWK 0.527  (10s)
+   rep 0 ordinal logit  grouped  article QWK 0.230  outlet QWK 0.450  (10s)
+   rep 0 random forest  naive    article QWK 0.278  outlet QWK 0.643  (12s)
+   rep 0 random forest  grouped  article QWK 0.233  outlet QWK 0.523  (12s)
+   rep 0 boosting       naive    article QWK 0.273  outlet QWK 0.655  (9s)
+   rep 0 boosting       grouped  article QWK 0.229  outlet QWK 0.534  (10s)
+   rep 0 random forest  OOB      article QWK 0.280  outlet QWK 0.646
+   rep 1 ordinal logit  naive    article QWK 0.244  outlet QWK 0.535  (10s)
+   rep 1 ordinal logit  grouped  article QWK 0.231  outlet QWK 0.500  (10s)
+   rep 1 random forest  naive    article QWK 0.279  outlet QWK 0.615  (12s)
+   rep 1 random forest  grouped  article QWK 0.231  outlet QWK 0.545  (12s)
+   rep 1 boosting       naive    article QWK 0.274  outlet QWK 0.659  (10s)
+   rep 1 boosting       grouped  article QWK 0.224  outlet QWK 0.562  (10s)
+   rep 1 random forest  OOB      article QWK 0.277  outlet QWK 0.643
+   rep 2 ordinal logit  naive    article QWK 0.244  outlet QWK 0.535  (10s)
+   rep 2 ordinal logit  grouped  article QWK 0.231  outlet QWK 0.487  (10s)
+   rep 2 random forest  naive    article QWK 0.281  outlet QWK 0.641  (12s)
+   rep 2 random forest  grouped  article QWK 0.238  outlet QWK 0.550  (12s)
+   rep 2 boosting       naive    article QWK 0.273  outlet QWK 0.646  (10s)
+   rep 2 boosting       grouped  article QWK 0.233  outlet QWK 0.585  (10s)
+   rep 2 random forest  OOB      article QWK 0.278  outlet QWK 0.648
+   rep 3 ordinal logit  naive    article QWK 0.244  outlet QWK 0.527  (10s)
+   rep 3 ordinal logit  grouped  article QWK 0.229  outlet QWK 0.515  (10s)
+   rep 3 random forest  naive    article QWK 0.281  outlet QWK 0.642  (12s)
+   rep 3 random forest  grouped  article QWK 0.236  outlet QWK 0.604  (12s)
+   rep 3 boosting       naive    article QWK 0.273  outlet QWK 0.649  (10s)
+   rep 3 boosting       grouped  article QWK 0.232  outlet QWK 0.591  (10s)
+   rep 3 random forest  OOB      article QWK 0.278  outlet QWK 0.656
+   rep 4 ordinal logit  naive    article QWK 0.244  outlet QWK 0.527  (10s)
+   rep 4 ordinal logit  grouped  article QWK 0.233  outlet QWK 0.533  (10s)
+   rep 4 random forest  naive    article QWK 0.280  outlet QWK 0.650  (12s)
+   rep 4 random forest  grouped  article QWK 0.232  outlet QWK 0.577  (12s)
+   rep 4 boosting       naive    article QWK 0.270  outlet QWK 0.649  (10s)
+   rep 4 boosting       grouped  article QWK 0.227  outlet QWK 0.570  (9s)
+   rep 4 random forest  OOB      article QWK 0.279  outlet QWK 0.659
+
+   QWK (mean over repeats) with 95% outlet-bootstrap CI
+   model          scheme     article  CI                  outlet  CI
+   ordinal logit  naive        0.244  [+0.196, +0.286]     0.531  [+0.443, +0.610]
+   ordinal logit  grouped      0.231  [+0.183, +0.273]     0.497  [+0.415, +0.573]
+   random forest  naive        0.280  [+0.232, +0.319]     0.638  [+0.549, +0.711]
+   random forest  OOB          0.278  [+0.230, +0.319]     0.650  [+0.561, +0.723]
+   random forest  grouped      0.234  [+0.189, +0.276]     0.560  [+0.473, +0.635]
+   boosting       naive        0.273  [+0.225, +0.314]     0.652  [+0.557, +0.736]
+   boosting       grouped      0.229  [+0.183, +0.271]     0.568  [+0.477, +0.648]
+
+   INFLATION: naive minus grouped (paired by outlet)
+   ordinal logit  article  +0.014 [+0.009, +0.018]  = +6% of the grouped score
+   ordinal logit  outlet   +0.033 [+0.005, +0.063]  = +7% of the grouped score
+   random forest  article  +0.046 [+0.032, +0.062]  = +20% of the grouped score
+   random forest  outlet   +0.079 [+0.034, +0.127]  = +14% of the grouped score
+   boosting       article  +0.044 [+0.030, +0.060]  = +19% of the grouped score
+   boosting       outlet   +0.083 [+0.045, +0.125]  = +15% of the grouped score
+   random forest  OOB, outlet +0.090 [+0.045, +0.139]
+
+====================================================================================================
+C  FEATURE-GROUP ABLATION and D  TEXT BEYOND BIAS (outlet-grouped, same folds throughout)
+   rep 0 emotion only           ordinal logit  article QWK 0.074  outlet QWK 0.267  (3s)
+   rep 0 emotion only           random forest  article QWK 0.062  outlet QWK 0.377  (8s)
+   rep 0 emotion only           boosting       article QWK 0.081  outlet QWK 0.395  (8s)
+   rep 0 epistemic only         ordinal logit  article QWK 0.097  outlet QWK 0.205  (3s)
+   rep 0 epistemic only         random forest  article QWK 0.103  outlet QWK 0.343  (4s)
+   rep 0 epistemic only         boosting       article QWK 0.107  outlet QWK 0.377  (8s)
+   rep 0 style only             ordinal logit  article QWK 0.184  outlet QWK 0.303  (4s)
+   rep 0 style only             random forest  article QWK 0.193  outlet QWK 0.463  (7s)
+   rep 0 style only             boosting       article QWK 0.181  outlet QWK 0.471  (9s)
+   rep 0 text without emotion   ordinal logit  article QWK 0.213  outlet QWK 0.434  (7s)
+   rep 0 text without emotion   random forest  article QWK 0.223  outlet QWK 0.506  (7s)
+   rep 0 text without emotion   boosting       article QWK 0.213  outlet QWK 0.515  (9s)
+   rep 0 text without epistemic ordinal logit  article QWK 0.198  outlet QWK 0.365  (8s)
+   rep 0 text without epistemic random forest  article QWK 0.209  outlet QWK 0.464  (10s)
+   rep 0 text without epistemic boosting       article QWK 0.206  outlet QWK 0.490  (9s)
+   rep 0 text without style     ordinal logit  article QWK 0.112  outlet QWK 0.255  (5s)
+   rep 0 text without style     random forest  article QWK 0.134  outlet QWK 0.380  (10s)
+   rep 0 text without style     boosting       article QWK 0.135  outlet QWK 0.398  (9s)
+   rep 0 bias only              ordinal logit  article QWK 0.666  outlet QWK 0.679  (4s)
+   rep 0 bias only              random forest  article QWK 0.750  outlet QWK 0.758  (1s)
+   rep 0 bias only              boosting       article QWK 0.750  outlet QWK 0.758  (5s)
+   rep 0 text + bias            ordinal logit  article QWK 0.696  outlet QWK 0.686  (17s)
+   rep 0 text + bias            random forest  article QWK 0.716  outlet QWK 0.750  (10s)
+   rep 0 text + bias            boosting       article QWK 0.715  outlet QWK 0.748  (12s)
+   rep 1 emotion only           ordinal logit  article QWK 0.077  outlet QWK 0.241  (3s)
+   rep 1 emotion only           random forest  article QWK 0.070  outlet QWK 0.357  (8s)
+   rep 1 emotion only           boosting       article QWK 0.081  outlet QWK 0.362  (8s)
+   rep 1 epistemic only         ordinal logit  article QWK 0.097  outlet QWK 0.205  (3s)
+   rep 1 epistemic only         random forest  article QWK 0.108  outlet QWK 0.321  (4s)
+   rep 1 epistemic only         boosting       article QWK 0.110  outlet QWK 0.329  (9s)
+   rep 1 style only             ordinal logit  article QWK 0.187  outlet QWK 0.318  (4s)
+   rep 1 style only             random forest  article QWK 0.190  outlet QWK 0.470  (8s)
+   rep 1 style only             boosting       article QWK 0.187  outlet QWK 0.470  (9s)
+   rep 1 text without emotion   ordinal logit  article QWK 0.217  outlet QWK 0.466  (7s)
+   rep 1 text without emotion   random forest  article QWK 0.219  outlet QWK 0.519  (8s)
+   rep 1 text without emotion   boosting       article QWK 0.212  outlet QWK 0.532  (10s)
+   rep 1 text without epistemic ordinal logit  article QWK 0.199  outlet QWK 0.336  (8s)
+   rep 1 text without epistemic random forest  article QWK 0.211  outlet QWK 0.490  (11s)
+   rep 1 text without epistemic boosting       article QWK 0.199  outlet QWK 0.471  (10s)
+   rep 1 text without style     ordinal logit  article QWK 0.113  outlet QWK 0.267  (5s)
+   rep 1 text without style     random forest  article QWK 0.138  outlet QWK 0.363  (11s)
+   rep 1 text without style     boosting       article QWK 0.137  outlet QWK 0.363  (9s)
+   rep 1 bias only              ordinal logit  article QWK 0.657  outlet QWK 0.675  (4s)
+   rep 1 bias only              random forest  article QWK 0.717  outlet QWK 0.728  (1s)
+   rep 1 bias only              boosting       article QWK 0.709  outlet QWK 0.720  (5s)
+   rep 1 text + bias            ordinal logit  article QWK 0.682  outlet QWK 0.684  (18s)
+   rep 1 text + bias            random forest  article QWK 0.707  outlet QWK 0.724  (10s)
+   rep 1 text + bias            boosting       article QWK 0.711  outlet QWK 0.739  (11s)
+   rep 2 emotion only           ordinal logit  article QWK 0.074  outlet QWK 0.284  (3s)
+   rep 2 emotion only           random forest  article QWK 0.064  outlet QWK 0.362  (9s)
+   rep 2 emotion only           boosting       article QWK 0.079  outlet QWK 0.424  (8s)
+   rep 2 epistemic only         ordinal logit  article QWK 0.094  outlet QWK 0.198  (3s)
+   rep 2 epistemic only         random forest  article QWK 0.109  outlet QWK 0.335  (4s)
+   rep 2 epistemic only         boosting       article QWK 0.112  outlet QWK 0.364  (9s)
+   rep 2 style only             ordinal logit  article QWK 0.185  outlet QWK 0.331  (4s)
+   rep 2 style only             random forest  article QWK 0.195  outlet QWK 0.478  (8s)
+   rep 2 style only             boosting       article QWK 0.191  outlet QWK 0.443  (9s)
+   rep 2 text without emotion   ordinal logit  article QWK 0.217  outlet QWK 0.472  (7s)
+   rep 2 text without emotion   random forest  article QWK 0.227  outlet QWK 0.533  (8s)
+   rep 2 text without emotion   boosting       article QWK 0.223  outlet QWK 0.584  (9s)
+   rep 2 text without epistemic ordinal logit  article QWK 0.200  outlet QWK 0.336  (8s)
+   rep 2 text without epistemic random forest  article QWK 0.217  outlet QWK 0.503  (10s)
+   rep 2 text without epistemic boosting       article QWK 0.213  outlet QWK 0.508  (9s)
+   rep 2 text without style     ordinal logit  article QWK 0.113  outlet QWK 0.258  (5s)
+   rep 2 text without style     random forest  article QWK 0.136  outlet QWK 0.396  (11s)
+   rep 2 text without style     boosting       article QWK 0.138  outlet QWK 0.406  (16s)
+   rep 2 bias only              ordinal logit  article QWK 0.661  outlet QWK 0.670  (4s)
+   rep 2 bias only              random forest  article QWK 0.665  outlet QWK 0.671  (1s)
+   rep 2 bias only              boosting       article QWK 0.665  outlet QWK 0.671  (5s)
+   rep 2 text + bias            ordinal logit  article QWK 0.698  outlet QWK 0.727  (17s)
+   rep 2 text + bias            random forest  article QWK 0.707  outlet QWK 0.719  (10s)
+   rep 2 text + bias            boosting       article QWK 0.706  outlet QWK 0.740  (11s)
+   rep 3 emotion only           ordinal logit  article QWK 0.076  outlet QWK 0.288  (3s)
+   rep 3 emotion only           random forest  article QWK 0.069  outlet QWK 0.371  (9s)
+   rep 3 emotion only           boosting       article QWK 0.080  outlet QWK 0.442  (8s)
+   rep 3 epistemic only         ordinal logit  article QWK 0.096  outlet QWK 0.202  (3s)
+   rep 3 epistemic only         random forest  article QWK 0.110  outlet QWK 0.365  (4s)
+   rep 3 epistemic only         boosting       article QWK 0.110  outlet QWK 0.403  (9s)
+   rep 3 style only             ordinal logit  article QWK 0.181  outlet QWK 0.321  (4s)
+   rep 3 style only             random forest  article QWK 0.193  outlet QWK 0.509  (8s)
+   rep 3 style only             boosting       article QWK 0.193  outlet QWK 0.497  (9s)
+   rep 3 text without emotion   ordinal logit  article QWK 0.212  outlet QWK 0.453  (7s)
+   rep 3 text without emotion   random forest  article QWK 0.224  outlet QWK 0.566  (8s)
+   rep 3 text without emotion   boosting       article QWK 0.217  outlet QWK 0.549  (10s)
+   rep 3 text without epistemic ordinal logit  article QWK 0.197  outlet QWK 0.328  (8s)
+   rep 3 text without epistemic random forest  article QWK 0.214  outlet QWK 0.513  (10s)
+   rep 3 text without epistemic boosting       article QWK 0.204  outlet QWK 0.504  (10s)
+   rep 3 text without style     ordinal logit  article QWK 0.117  outlet QWK 0.268  (5s)
+   rep 3 text without style     random forest  article QWK 0.143  outlet QWK 0.375  (11s)
+   rep 3 text without style     boosting       article QWK 0.145  outlet QWK 0.391  (9s)
+   rep 3 bias only              ordinal logit  article QWK 0.659  outlet QWK 0.672  (4s)
+   rep 3 bias only              random forest  article QWK 0.758  outlet QWK 0.766  (2s)
+   rep 3 bias only              boosting       article QWK 0.758  outlet QWK 0.766  (5s)
+   rep 3 text + bias            ordinal logit  article QWK 0.705  outlet QWK 0.717  (17s)
+   rep 3 text + bias            random forest  article QWK 0.712  outlet QWK 0.734  (10s)
+   rep 3 text + bias            boosting       article QWK 0.712  outlet QWK 0.758  (11s)
+   rep 4 emotion only           ordinal logit  article QWK 0.078  outlet QWK 0.288  (3s)
+   rep 4 emotion only           random forest  article QWK 0.063  outlet QWK 0.408  (9s)
+   rep 4 emotion only           boosting       article QWK 0.086  outlet QWK 0.399  (8s)
+   rep 4 epistemic only         ordinal logit  article QWK 0.095  outlet QWK 0.186  (3s)
+   rep 4 epistemic only         random forest  article QWK 0.103  outlet QWK 0.331  (4s)
+   rep 4 epistemic only         boosting       article QWK 0.103  outlet QWK 0.357  (9s)
+   rep 4 style only             ordinal logit  article QWK 0.184  outlet QWK 0.321  (4s)
+   rep 4 style only             random forest  article QWK 0.195  outlet QWK 0.443  (8s)
+   rep 4 style only             boosting       article QWK 0.186  outlet QWK 0.481  (9s)
+   rep 4 text without emotion   ordinal logit  article QWK 0.220  outlet QWK 0.486  (7s)
+   rep 4 text without emotion   random forest  article QWK 0.221  outlet QWK 0.577  (8s)
+   rep 4 text without emotion   boosting       article QWK 0.216  outlet QWK 0.560  (10s)
+   rep 4 text without epistemic ordinal logit  article QWK 0.198  outlet QWK 0.345  (8s)
+   rep 4 text without epistemic random forest  article QWK 0.210  outlet QWK 0.491  (11s)
+   rep 4 text without epistemic boosting       article QWK 0.201  outlet QWK 0.489  (10s)
+   rep 4 text without style     ordinal logit  article QWK 0.116  outlet QWK 0.255  (5s)
+   rep 4 text without style     random forest  article QWK 0.138  outlet QWK 0.407  (11s)
+   rep 4 text without style     boosting       article QWK 0.135  outlet QWK 0.389  (10s)
+   rep 4 bias only              ordinal logit  article QWK 0.639  outlet QWK 0.651  (4s)
+   rep 4 bias only              random forest  article QWK 0.746  outlet QWK 0.757  (2s)
+   rep 4 bias only              boosting       article QWK 0.746  outlet QWK 0.757  (5s)
+   rep 4 text + bias            ordinal logit  article QWK 0.688  outlet QWK 0.692  (17s)
+   rep 4 text + bias            random forest  article QWK 0.723  outlet QWK 0.752  (10s)
+   rep 4 text + bias            boosting       article QWK 0.721  outlet QWK 0.747  (11s)
+
+   OUTLET-LEVEL QWK by feature set, 95% CI (article-level QWK listed underneath)
+                                 ordinal logit           random forest                boosting
+features                                                                                      
+emotion only            0.273 [+0.182, +0.365]  0.375 [+0.279, +0.467]  0.404 [+0.304, +0.498]
+epistemic only          0.199 [+0.092, +0.307]  0.339 [+0.218, +0.446]  0.366 [+0.252, +0.468]
+style only              0.319 [+0.217, +0.417]  0.473 [+0.371, +0.565]  0.472 [+0.369, +0.563]
+all text                0.497 [+0.415, +0.573]  0.560 [+0.473, +0.635]  0.568 [+0.477, +0.648]
+text without emotion    0.462 [+0.373, +0.541]  0.540 [+0.449, +0.621]  0.548 [+0.452, +0.628]
+text without epistemic  0.342 [+0.240, +0.438]  0.492 [+0.395, +0.584]  0.492 [+0.390, +0.581]
+text without style      0.261 [+0.154, +0.365]  0.384 [+0.272, +0.484]  0.389 [+0.285, +0.490]
+bias only               0.670 [+0.586, +0.743]  0.736 [+0.674, +0.790]  0.734 [+0.672, +0.788]
+text + bias             0.701 [+0.631, +0.764]  0.736 [+0.670, +0.789]  0.746 [+0.683, +0.797]
+   article QWK: emotion only: 0.076/0.066/0.081; epistemic only: 0.096/0.107/0.108; style only: 0.184/0.193/0.188; all text: 0.231/0.234/0.229; text without emotion: 0.216/0.223/0.216; text without epistemic: 0.198/0.212/0.205; text without style: 0.114/0.138/0.138; bias only: 0.656/0.727/0.726; text + bias: 0.694/0.713/0.713
+
+   UNIQUE CONTRIBUTION of each group: all text minus text without that group (outlet QWK, paired)
+   emotion   ordinal logit  +0.035 [-0.010, +0.084]  P(draw > 0) 0.94
+   emotion   random forest  +0.020 [-0.009, +0.051]  P(draw > 0) 0.90
+   emotion   boosting       +0.020 [-0.007, +0.052]  P(draw > 0) 0.92
+   epistemic ordinal logit  +0.155 [+0.075, +0.240]  P(draw > 0) 1.00
+   epistemic random forest  +0.068 [+0.008, +0.126]  P(draw > 0) 0.99
+   epistemic boosting       +0.076 [+0.024, +0.132]  P(draw > 0) 1.00
+   style     ordinal logit  +0.236 [+0.130, +0.337]  P(draw > 0) 1.00
+   style     random forest  +0.176 [+0.070, +0.275]  P(draw > 0) 1.00
+   style     boosting       +0.179 [+0.087, +0.266]  P(draw > 0) 1.00
+
+   D  TEXT + BIAS minus BIAS ONLY (outlet level, paired)
+   ordinal logit  QWK       +0.032 [+0.006, +0.065]  P(draw > 0) 1.00
+   ordinal logit  accuracy  +0.009 [+0.001, +0.018]  P(draw > 0) 0.99
+   ordinal logit  macro F1  +0.006 [+0.001, +0.012]  P(draw > 0) 0.99
+   random forest  QWK       -0.000 [-0.028, +0.030]  P(draw > 0) 0.50
+   random forest  accuracy  +0.059 [+0.013, +0.107]  P(draw > 0) 0.99
+   random forest  macro F1  +0.015 [-0.033, +0.064]  P(draw > 0) 0.74
+   boosting       QWK       +0.012 [-0.016, +0.043]  P(draw > 0) 0.80
+   boosting       accuracy  +0.041 [+0.003, +0.082]  P(draw > 0) 0.98
+   boosting       macro F1  +0.021 [-0.023, +0.069]  P(draw > 0) 0.82
+
+====================================================================================================
+E  SAME-RATER CHECK: MBFC bias vs Ad Fontes lean as the benchmark, on the same outlets
+   22,832 articles, 81 outlets | outlets by class: Very Low 2, Low 8, Mixed 26, Mostly Factual 16, High 29
+   rep 0 MBFC bias         ordinal logit  outlet QWK 0.582
+   rep 0 MBFC bias         random forest  outlet QWK 0.608
+   rep 0 MBFC bias         boosting       outlet QWK 0.608
+   rep 0 Ad Fontes lean    ordinal logit  outlet QWK 0.605
+   rep 0 Ad Fontes lean    random forest  outlet QWK 0.507
+   rep 0 Ad Fontes lean    boosting       outlet QWK 0.513
+   rep 0 text only         ordinal logit  outlet QWK 0.067
+   rep 0 text only         random forest  outlet QWK 0.204
+   rep 0 text only         boosting       outlet QWK 0.139
+   rep 0 text + Ad Fontes  ordinal logit  outlet QWK 0.582
+   rep 0 text + Ad Fontes  random forest  outlet QWK 0.539
+   rep 0 text + Ad Fontes  boosting       outlet QWK 0.513
+   rep 1 MBFC bias         ordinal logit  outlet QWK 0.543
+   rep 1 MBFC bias         random forest  outlet QWK 0.624
+   rep 1 MBFC bias         boosting       outlet QWK 0.624
+   rep 1 Ad Fontes lean    ordinal logit  outlet QWK 0.565
+   rep 1 Ad Fontes lean    random forest  outlet QWK 0.520
+   rep 1 Ad Fontes lean    boosting       outlet QWK 0.512
+   rep 1 text only         ordinal logit  outlet QWK 0.220
+   rep 1 text only         random forest  outlet QWK 0.183
+   rep 1 text only         boosting       outlet QWK 0.161
+   rep 1 text + Ad Fontes  ordinal logit  outlet QWK 0.551
+   rep 1 text + Ad Fontes  random forest  outlet QWK 0.555
+   rep 1 text + Ad Fontes  boosting       outlet QWK 0.512
+   rep 2 MBFC bias         ordinal logit  outlet QWK 0.593
+   rep 2 MBFC bias         random forest  outlet QWK 0.613
+   rep 2 MBFC bias         boosting       outlet QWK 0.613
+   rep 2 Ad Fontes lean    ordinal logit  outlet QWK 0.573
+   rep 2 Ad Fontes lean    random forest  outlet QWK 0.491
+   rep 2 Ad Fontes lean    boosting       outlet QWK 0.482
+   rep 2 text only         ordinal logit  outlet QWK 0.090
+   rep 2 text only         random forest  outlet QWK 0.131
+   rep 2 text only         boosting       outlet QWK 0.138
+   rep 2 text + Ad Fontes  ordinal logit  outlet QWK 0.551
+   rep 2 text + Ad Fontes  random forest  outlet QWK 0.542
+   rep 2 text + Ad Fontes  boosting       outlet QWK 0.482
+   rep 3 MBFC bias         ordinal logit  outlet QWK 0.593
+   rep 3 MBFC bias         random forest  outlet QWK 0.624
+   rep 3 MBFC bias         boosting       outlet QWK 0.624
+   rep 3 Ad Fontes lean    ordinal logit  outlet QWK 0.611
+   rep 3 Ad Fontes lean    random forest  outlet QWK 0.459
+   rep 3 Ad Fontes lean    boosting       outlet QWK 0.459
+   rep 3 text only         ordinal logit  outlet QWK 0.087
+   rep 3 text only         random forest  outlet QWK 0.172
+   rep 3 text only         boosting       outlet QWK 0.142
+   rep 3 text + Ad Fontes  ordinal logit  outlet QWK 0.615
+   rep 3 text + Ad Fontes  random forest  outlet QWK 0.512
+   rep 3 text + Ad Fontes  boosting       outlet QWK 0.459
+   rep 4 MBFC bias         ordinal logit  outlet QWK 0.582
+   rep 4 MBFC bias         random forest  outlet QWK 0.585
+   rep 4 MBFC bias         boosting       outlet QWK 0.585
+   rep 4 Ad Fontes lean    ordinal logit  outlet QWK 0.563
+   rep 4 Ad Fontes lean    random forest  outlet QWK 0.509
+   rep 4 Ad Fontes lean    boosting       outlet QWK 0.516
+   rep 4 text only         ordinal logit  outlet QWK 0.162
+   rep 4 text only         random forest  outlet QWK 0.202
+   rep 4 text only         boosting       outlet QWK 0.158
+   rep 4 text + Ad Fontes  ordinal logit  outlet QWK 0.584
+   rep 4 text + Ad Fontes  random forest  outlet QWK 0.579
+   rep 4 text + Ad Fontes  boosting       outlet QWK 0.516
+
+   OUTLET-LEVEL QWK on the Ad Fontes subset, 95% CI
+   MBFC bias         ordinal logit: 0.579 [+0.414, +0.702]  random forest: 0.611 [+0.470, +0.712]  boosting: 0.611 [+0.470, +0.712]
+   Ad Fontes lean    ordinal logit: 0.583 [+0.423, +0.709]  random forest: 0.497 [+0.321, +0.638]  boosting: 0.496 [+0.320, +0.640]
+   text only         ordinal logit: 0.125 [-0.051, +0.299]  random forest: 0.178 [-0.001, +0.345]  boosting: 0.148 [-0.017, +0.312]
+   text + Ad Fontes  ordinal logit: 0.576 [+0.421, +0.701]  random forest: 0.545 [+0.376, +0.676]  boosting: 0.496 [+0.320, +0.640]
+
+   paired differences (outlet QWK)
+   ordinal logit  MBFC minus Ad Fontes -0.005 [-0.147, +0.137]   text+AF minus AF -0.007 [-0.048, +0.029]
+   random forest  MBFC minus Ad Fontes +0.114 [-0.022, +0.254]   text+AF minus AF +0.048 [+0.002, +0.111]
+   boosting       MBFC minus Ad Fontes +0.114 [-0.023, +0.257]   text+AF minus AF +0.000 [+0.000, +0.000]
+
+RESULT: wrote 08c_feature_ceiling.csv, 08c_runs.csv, 08c_estimates.csv, 08c_outlet_rows.parquet, fig_08c_ablation.png, fig_08c_leakage.png in 1515s

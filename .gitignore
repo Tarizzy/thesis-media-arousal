@@ -1,0 +1,24 @@
+# data and licensed resources — never commit
+data/
+NRC-VAD-Lexicon-v2.1*/
+NRC-VAD-Lexicon-v2.1.zip
+*.parquet
+*.xlsx
+model_frame*.csv
+outlet_level*.csv
+features_sample*.csv
+sample_index*.csv
+sample_unfiltered_index*.csv
+09_rating_key.csv
+*sanity_sample*
+02_keywords_v2.txt
+# working files
+__pycache__/
+*.pyc
+*.log
+.DS_Store
+~$*
+*_sep20*
+*_onecoder*
+*copy*
+backup_*/

@@ -1,0 +1,29 @@
+06a_model_frame - 2026-09-21 18:45
+analysis table 57,210 articles, 211 outlets, 32 clusters | topic measure 32 rows
+arousal mean -0.01508, SD 0.05598 (coefficients are in SDs of article arousal)
+factuality centred at the outlet mean 2.332 (0 = Very Low ... 4 = High incl. Very High)
+topic partisanship standardised across 32 clusters (mean 0.000, SD 1.000)
+
+OUTLETS BY FACTUALITY LEVEL (model coding)
+      outlets  articles
+fact                   
+0          16      4099
+1          48     13266
+2          60     16668
+3          24      6456
+4          63     16721
+
+FACTUALITY vs BIAS EXTREMITY at outlet level (the confound M5 controls for)
+bias_ext  0   1   2   3
+fact                   
+0         0   2   3  11
+1         0   0  17  31
+2         0  10  45   5
+3         2  12  10   0
+4         9  40  14   0
+   Spearman rho -0.741
+
+variation the interaction rests on: 211 outlets x 32 clusters, 57,210 articles
+articles per outlet: median 289; per cluster: median 1480
+
+RESULT: OK - wrote model_frame.csv (57,210 rows) in 0s

@@ -1,0 +1,45 @@
+ARTICLES SCANNED: 3,526,820 from 212 outlets
+
+SHARE OF ALL ARTICLES CONTAINING EACH PATTERN
+has_quote_mark    0.8116
+apos_artifact     0.0000
+quot_artifact     0.0001
+html_entity       0.0001
+
+OUTLETS WITH apos_artifact IN MORE THAN 1% OF ARTICLES: 0
+
+OUTLETS WITH quot_artifact IN MORE THAN 1% OF ARTICLES: 0
+
+OUTLETS WITH html_entity IN MORE THAN 1% OF ARTICLES: 1
+source    n  has_quote_mark  apos_artifact  quot_artifact  html_entity
+fusion 1512           0.108            0.0            0.0        0.134
+
+15 OUTLETS WITH THE LOWEST SHARE OF ARTICLES CONTAINING A QUOTATION MARK
+                source     n  has_quote_mark  apos_artifact  quot_artifact  html_entity
+                fusion  1512           0.108            0.0            0.0        0.134
+     realclearpolitics 20110           0.193            0.0            0.0        0.000
+             dailymail 16672           0.233            0.0            0.0        0.000
+            channel4uk  4247           0.242            0.0            0.0        0.000
+                   yna 14028           0.300            0.0            0.0        0.000
+         thinkprogress  7054           0.443            0.0            0.0        0.000
+         jerusalempost  8143           0.446            0.0            0.0        0.000
+              theblaze  9721           0.451            0.0            0.0        0.000
+               fortune 14478           0.463            0.0            0.0        0.000
+         mintpressnews  2950           0.514            0.0            0.0        0.000
+mediamattersforamerica  4349           0.520            0.0            0.0        0.000
+        chicagotribune  8703           0.521            0.0            0.0        0.000
+               pjmedia 16682           0.521            0.0            0.0        0.000
+         addictinginfo  1114           0.541            0.0            0.0        0.000
+      citizenfreepress  1957           0.550            0.0            0.0        0.000
+
+EXAMPLE SNIPPETS
+  fusion: 'One of America&#8217;s surliest comics is back with a new series on Audible calle'
+  fusion: '&#8230;The rules created by the EPA have done a marvelous job of cl'
+  bbc: 'It was built by Widow Clicquot - Veuve Clicquot in French - a name more closely associated <copyright> <cop'
+  fusion: 'yright> <copyright> <copyright> <copyright> <copyright> Here&#8217;s a look at the fight LGBTQ activists are waging <copyright>'
+  fusion: 'ng greenhouse gas emissions is easy for a country that doesn&#8217;t pollute with heavy industry. Switching the energy matrix t'
+  fusion: 'There&#8217;s a new language being taught in mosques across North Americ'
+  fusion: 'ght> <copyright> <copyright> <copyright> <copyright> America&#8217;s automotive subculture in this fast-paced docu-series'
+  fusion: 'opyright> <copyright> <copyright> <copyright> <copyright> , &#8220;La Jura.&#8221; &#8220; <copyright> <copyright> <copyright> '
+  fusion: '&#8220;We never try to describe our sound because we feel like it d'
+  fusion: 'The Macy&#8217;s fashion line is getting a modest makeover.'

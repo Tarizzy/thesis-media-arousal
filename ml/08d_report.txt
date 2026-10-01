@@ -1,0 +1,74 @@
+08d_explain - 2026-09-22 09:12 - 57,210 articles, 211 outlets
+boosting settings {'learning_rate': 0.1, 'max_leaf_nodes': 7} from 08b2 (most frequent choice for text only); rounds by outlet-grouped early stopping in every fold
+
+====================================================================================================
+1  SHAP (each article explained by a model that never saw its outlet)
+   fold 0: 11,359 held-out articles, 163 rounds
+   fold 1: 11,526 held-out articles, 97 rounds
+   fold 2: 11,259 held-out articles, 124 rounds
+   fold 3: 11,458 held-out articles, 78 rounds
+   fold 4: 11,608 held-out articles, 57 rounds
+   out-of-fold QWK of the explained models: article 0.230, outlet 0.527
+
+   mean |SHAP| per class (log-odds units; bigger = the feature moves that class's score more), and the
+   direction: Spearman rho between a feature's value and its SHAP value. rho > 0 for Very Low means higher
+   values push an article TOWARDS Very Low; rho > 0 for High means higher values push it towards High.
+                         group  Very Low    Low  Mixed  Mostly Factual   High  all classes  rho | Very Low  rho | High
+log_length               style    +0.395 +0.113 +0.144          +0.147 +0.262       +1.060          -0.929      +0.893
+attribution_density  epistemic    +0.163 +0.234 +0.022          +0.160 +0.097       +0.675          -0.750      +0.729
+exclamation_rate         style    +0.102 +0.081 +0.054          +0.089 +0.175       +0.500          +0.591      -0.625
+mtld                     style    +0.126 +0.043 +0.032          +0.091 +0.110       +0.402          -0.915      +0.942
+caps_ratio               style    +0.047 +0.085 +0.030          +0.101 +0.101       +0.364          +0.564      -0.566
+flesch_kincaid           style    +0.088 +0.083 +0.053          +0.055 +0.055       +0.334          +0.649      -0.188
+valence                emotion    +0.059 +0.077 +0.018          +0.057 +0.082       +0.294          -0.880      +0.927
+dominance              emotion    +0.094 +0.030 +0.030          +0.024 +0.052       +0.231          -0.873      +0.804
+certainty            epistemic    +0.054 +0.009 +0.004          +0.023 +0.076       +0.165          +0.688      -0.749
+arousal                emotion    +0.054 +0.013 +0.027          +0.023 +0.039       +0.157          +0.837      -0.816
+hedging              epistemic    +0.023 +0.063 +0.013          +0.026 +0.013       +0.139          +0.431      -0.056
+
+   by feature group (sum over the group's features and all classes)
+           mean |SHAP|  share
+emotion          0.681  0.158
+epistemic        0.979  0.227
+style            2.659  0.616
+
+====================================================================================================
+2  PERMUTATION IMPORTANCE (held-out outlets; drop in QWK when a feature's values are shuffled)
+   repeat 0: baseline QWK article 0.230, outlet 0.527
+   repeat 1: baseline QWK article 0.225, outlet 0.552
+   repeat 2: baseline QWK article 0.237, outlet 0.587
+   (3 fold splits x 10 shuffles; interval = spread of the drops across shuffles and splits)
+                     article drop  article 2.5%  article 97.5%  outlet drop  outlet 2.5%  outlet 97.5%
+GROUP style                +0.173        +0.166         +0.184       +0.337       +0.289        +0.398
+GROUP epistemic            +0.048        +0.045         +0.051       +0.143       +0.110        +0.185
+log_length                 +0.097        +0.090         +0.104       +0.135       +0.097        +0.175
+attribution_density        +0.041        +0.038         +0.044       +0.119       +0.092        +0.143
+exclamation_rate           +0.032        +0.026         +0.036       +0.049       +0.015        +0.081
+caps_ratio                 +0.026        +0.022         +0.028       +0.037       -0.005        +0.058
+GROUP emotion              +0.022        +0.017         +0.026       +0.025       +0.008        +0.042
+mtld                       +0.014        +0.010         +0.018       +0.024       -0.014        +0.061
+valence                    +0.010        +0.006         +0.014       +0.019       +0.001        +0.044
+certainty                  +0.006        +0.003         +0.008       +0.012       -0.005        +0.036
+arousal                    +0.002        -0.000         +0.004       +0.004       -0.013        +0.015
+dominance                  +0.005        +0.002         +0.008       +0.000       -0.019        +0.017
+hedging                    +0.003        +0.000         +0.006       -0.001       -0.023        +0.024
+flesch_kincaid             +0.004        -0.000         +0.007       -0.024       -0.044        -0.004
+
+====================================================================================================
+3  ORDINAL LOGIT ON ALL ARTICLES (standardised features, other ten held constant)
+   odds ratio = change in the odds of a HIGHER factuality class per 1 SD of the feature;
+   95% CI from 500 outlet-bootstrap refits (articles resampled with their outlet)
+                         group  coef per SD  odds ratio  OR 2.5%  OR 97.5%                        reading
+exclamation_rate         style       -0.263       0.769    0.712     0.826  higher -> LESS factual outlet
+certainty            epistemic       -0.091       0.913    0.881     0.945  higher -> LESS factual outlet
+arousal                emotion       -0.072       0.930    0.882     0.996  higher -> LESS factual outlet
+caps_ratio               style       -0.071       0.931    0.829     0.973  higher -> LESS factual outlet
+flesch_kincaid           style       -0.014       0.986    0.895     1.084             no clear direction
+hedging              epistemic        0.047       1.048    0.995     1.107             no clear direction
+dominance              emotion        0.078       1.081    1.001     1.165  higher -> MORE factual outlet
+valence                emotion        0.091       1.095    1.024     1.178  higher -> MORE factual outlet
+mtld                     style        0.163       1.177    1.083     1.280  higher -> MORE factual outlet
+attribution_density  epistemic        0.240       1.272    1.133     1.416  higher -> MORE factual outlet
+log_length               style        0.306       1.358    1.177     1.547  higher -> MORE factual outlet
+
+RESULT: wrote 08d_shap.parquet, 08d_shap_summary.csv, 08d_permutation.csv, 08d_ordinal_coefs.csv and 7 figures in 23 min

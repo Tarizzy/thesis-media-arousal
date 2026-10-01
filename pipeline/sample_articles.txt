@@ -1,0 +1,21 @@
+seed 42 | numpy 2.4.4 | pandas 3.0.5 | duckdb 1.5.5
+
+FUNNEL (keyword list v2.1)
+  All sources                    488
+  Has bias                       383
+  Has factuality                 374
+  Not satire/pro-science         374
+  Political articles >= 200      227
+  Political share >= 10%         219
+  Sampled (Eligible sheet)       212
+  eligible under v2.1 but not sampled (no Ad Fontes score): 7 ['beholdisrael', 'inews', 'petapeoplefortheethicaltreatmentofanimals', 'prntly', 'thedailyrecord', 'theeuropeanuniontimes', 'wakingtimes']
+
+SAMPLE: 63,296 articles from 212 outlets
+  per outlet: min 232, max 300, outlets with fewer than 300: 9
+  duplicate ids: 0 | missing text: 0 | empty text: 0
+  articles per year: 2017 4,213, 2018 7,257, 2019 8,138, 2020 15,410, 2021 14,279, 2022 13,999
+
+SAMPLE_UNFILTERED: 63,600 articles from 212 outlets
+  per outlet: min 300, max 300, outlets with fewer than 300: 0
+  duplicate ids: 0 | missing text: 0 | empty text: 0
+  articles per year: 2017 4,141, 2018 6,923, 2019 7,329, 2020 15,565, 2021 15,123, 2022 14,519

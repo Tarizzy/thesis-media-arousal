@@ -1,0 +1,12 @@
+,group,coef per SD,odds ratio,OR 2.5%,OR 97.5%,reading
+exclamation_rate,style,-0.2625,0.7691,0.7123,0.8259,higher -> LESS factual outlet
+certainty,epistemic,-0.0912,0.9129,0.8812,0.9453,higher -> LESS factual outlet
+arousal,emotion,-0.0722,0.9303,0.8823,0.9956,higher -> LESS factual outlet
+caps_ratio,style,-0.0711,0.9314,0.8291,0.9733,higher -> LESS factual outlet
+flesch_kincaid,style,-0.0140,0.9861,0.8950,1.0842,no clear direction
+hedging,epistemic,0.0465,1.0476,0.9946,1.1070,no clear direction
+dominance,emotion,0.0775,1.0806,1.0010,1.1649,higher -> MORE factual outlet
+valence,emotion,0.0912,1.0955,1.0243,1.1777,higher -> MORE factual outlet
+mtld,style,0.1626,1.1766,1.0829,1.2801,higher -> MORE factual outlet
+attribution_density,epistemic,0.2404,1.2717,1.1333,1.4161,higher -> MORE factual outlet
+log_length,style,0.3059,1.3579,1.1769,1.5467,higher -> MORE factual outlet

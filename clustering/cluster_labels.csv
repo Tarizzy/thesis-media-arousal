@@ -1,0 +1,34 @@
+cluster,label,political,cap_code,cap_topic,note
+0,Latin America & US border,True,19,International Affairs,border and migration topics fit 9 Immigration
+1,Health: diet & drugs,True,3,Health,largest topic (Mariupol) misassigned here
+2,US pro sports,False,29,Sports and Recreation (media),
+3,Music,False,23,Arts and Entertainment (media),NYT Index codebook 23; the master policy codebook labels 23 Cultural Policy Issues
+4,Celebrity & soaps,False,23,Arts and Entertainment (media),alternative 99 Human Interest; NYT Index codebook 23 (master codebook labels 23 Cultural Policy Issues)
+5,Russia & Eastern Europe,True,19,International Affairs,
+6,Asia-Pacific,True,19,International Affairs,
+7,Transport,True,10,Transportation,
+8,US Congress,True,20,Government Operations,
+9,Environment & energy,True,7,Environment,energy topics fit 8 Energy
+10,Film & theatre,False,23,Arts and Entertainment (media),NYT Index codebook 23; the master policy codebook labels 23 Cultural Policy Issues
+11,Business & markets,True,15,Domestic Commerce,Federal Reserve topics fit 1 Macroeconomics
+12,US regional & local,True,24,State and Local Government Administration (media),"mixed: weather, parks, Rittenhouse"
+13,Lifestyle,False,99,"Other, Miscellaneous, Human Interest (media)",
+14,UK football & rugby,False,29,Sports and Recreation (media),
+15,Crime & justice,True,12,Law and Crime,includes guns (second amendment)
+16,Mixed: US political figures & misc,True,20,Government Operations,"mixed cluster: Greene, Omar, Barnier, Sarah Everard"
+17,UK domestic affairs,True,99,"Other, Miscellaneous, Human Interest (media)","mixed: pubs, Grenfell, rail, schools"
+18,Economy & welfare,True,1,Macroeconomics,"welfare topics fit 13, health insurance 3"
+19,Military & defence,True,16,Defense,Mar-a-Lago documents case misassigned here
+20,Foreign national politics,True,19,International Affairs,"Brexit, Partygate, Trudeau, Macron"
+21,US investigations,True,20,Government Operations,intelligence topics fit 16 Defense
+22,Partisan media,True,17,"Space, Science, Technology & Communications",media and broadcasting subtopic
+23,Space & nature,True,17,"Space, Science, Technology & Communications",natural disasters fit 26 Weather (media)
+24,Abortion & rights,True,2,Civil Rights,abortion is subtopic 208
+25,Election administration,True,20,Government Operations,voting rights fit 2 (subtopic 206)
+26,Olympic & individual sports,False,29,Sports and Recreation (media),
+27,Middle East & Afghanistan,True,19,International Affairs,
+28,Health & COVID,True,3,Health,
+29,Race & extremism,True,2,Civil Rights,family-separation and border-wall topics fit 9 Immigration
+30,Education,True,6,Education,
+31,Technology & cyber,True,17,"Space, Science, Technology & Communications",
+32,European club football,False,29,Sports and Recreation (media),

@@ -1,0 +1,36 @@
+00c_metadata_check - workbook side: 211 outlets from analysis_table.parquet
+
+metadata.db tables:
+   articles: ['article_id', 'year', 'source', 'title', 'content_hash', 'publication_date', 'topic_id', 'url', 'covid_article']
+   covid_articles: ['article_id']
+   sources: ['source', 'url', 'label', 'bias', 'factuality', 'country', 'type', 'popularity', 'credibility', 'reasoning', 'conspiracy', 'pseudosci', 'check_date']
+   topics: ['topic_id', 'year', 'representation', 'imbalanced_hyper_cluster', 'balanced_hyper_cluster']
+
+using table 'sources': key 'source', factuality 'factuality', bias 'bias'
+outlets found in metadata.db: 211 of 211
+
+FACTUALITY (the model's outcome)
+factuality
+agree    211
+
+BIAS
+bias
+agree    211
+
+FACTUALITY DISAGREEMENTS: 0 outlets, 0 articles
+
+BIAS DISAGREEMENTS: 0 outlets, 0 articles
+
+OUTLETS WITH SEVERAL RATINGS IN metadata.db: 0 outlets, 0 articles
+
+NOT FOUND IN metadata.db: 0 outlets, 0 articles
+
+COUNTRY in metadata.db for the 6 outlets with no country in the workbook
+   activistpost            not listed
+   countercurrentnews      not listed
+   libertywriters          not listed
+   sgtreport               not listed
+   usapoliticsnow          not listed
+   worldnewspolitics       not listed
+
+RESULT: no factuality disagreements - full table in 00c_metadata_check.csv. Nothing was changed.

@@ -1,0 +1,27 @@
+05c_weighting - 2026-09-20 20:08 - 200 split-halves, alpha_0 1,000
+outlets 211 | political articles per outlet: median 3,687, min 232, max 48,556 | at least 1,000: 169
+
+SPLIT-HALF RELIABILITY BY WEIGHTING SCHEME (rule 3 threshold: SB_abs >= 0.70)
+             SB_abs SB_signed rho_abs rho_signed sd_delta                                                             top3
+scheme                                                                                                                    
+equal          0.28      0.46    0.17       0.30     0.27  32:European club foot, 28:Health & COVID, 20:Foreign national p
+sqrt_n         0.21      0.38    0.11       0.23     0.19           30:Education, 32:European club foot, 28:Health & COVID
+capped         0.07      0.20    0.04       0.11     0.16        30:Education, 5:Russia & Eastern E, 32:European club foot
+pooled         0.06      0.23    0.03       0.13     0.18       14:UK football & rugb, 30:Education, 32:European club foot
+trim10         0.21      0.73    0.12       0.57     0.24  14:UK football & rugb, 32:European club foot, 28:Health & COVID
+big_only       0.19      0.27    0.11       0.16     0.21           30:Education, 32:European club foot, 28:Health & COVID
+mean_logodds   0.18      0.67    0.10       0.50     0.21  32:European club foot, 14:UK football & rugb, 28:Health & COVID
+
+SIDE AS A SHARE OF BETWEEN-OUTLET VARIANCE in log-odds attention: median 0.007, max 0.055 (cluster 28), clusters above 0.10: 0 of 33
+   strongest: 28 Health & COVID 0.06, 32 European club footba 0.05, 29 Race & extremism 0.04, 18 Economy & welfare 0.03, 24 Abortion & rights 0.03, 23 Space & nature 0.02, 6 Asia-Pacific 0.02, 13 Lifestyle 0.02
+
+RESULT: most reliable scheme 'equal' SB_abs 0.28 -> below 0.70: the fallback measure applies
+cross-scheme agreement (Spearman on |delta|):
+              equal  sqrt_n  capped  pooled  trim10  big_only  mean_logodds
+equal          1.00    0.74    0.36    0.64    0.46      0.57          0.52
+sqrt_n         0.74    1.00    0.65    0.81    0.52      0.79          0.32
+capped         0.36    0.65    1.00    0.58    0.15      0.44         -0.08
+pooled         0.64    0.81    0.58    1.00    0.39      0.52          0.28
+trim10         0.46    0.52    0.15    0.39    1.00      0.35          0.78
+big_only       0.57    0.79    0.44    0.52    0.35      1.00          0.29
+mean_logodds   0.52    0.32   -0.08    0.28    0.78      0.29          1.00
